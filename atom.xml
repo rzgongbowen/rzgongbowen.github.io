@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://rzgongbowen.gitee.io/blog/"/>
-  <updated>2020-03-24T11:51:02.375Z</updated>
+  <updated>2020-03-25T02:44:39.062Z</updated>
   <id>https://rzgongbowen.gitee.io/blog/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>尝试无需外链添加图片Demo01</title>
+    <link href="https://rzgongbowen.gitee.io/blog/2020/03/25/%E5%B0%9D%E8%AF%95%E6%97%A0%E9%9C%80%E5%A4%96%E9%93%BE%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87Demo01/"/>
+    <id>https://rzgongbowen.gitee.io/blog/2020/03/25/%E5%B0%9D%E8%AF%95%E6%97%A0%E9%9C%80%E5%A4%96%E9%93%BE%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87Demo01/</id>
+    <published>2020-03-25T02:42:56.000Z</published>
+    <updated>2020-03-25T02:44:39.062Z</updated>
+    
+    <content type="html"><![CDATA[<p>![](<a href="https://rzgongbowen.gitee.io/blog/img/2019-10-25">https://rzgongbowen.gitee.io/blog/img/2019-10-25</a> 10.43.52 1_20191029_203100_537.jpg)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;![](&lt;a href=&quot;https://rzgongbowen.gitee.io/blog/img/2019-10-25&quot;&gt;https://rzgongbowen.gitee.io/blog/img/2019-10-25&lt;/a&gt; 10.43.52 1_20191029_2
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>建博客第二天的总结</title>
