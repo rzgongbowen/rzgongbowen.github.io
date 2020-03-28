@@ -41,7 +41,23 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #4d4d4d">
+	<div id="tp-weather-widget"></div>
+	  <script>
+		(function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+		window.SeniverseWeatherWidget('show', {
+		  flavor: "slim",
+		  location: "WWKCX8PB3YE6",
+		  geolocation: true,
+		  language: "zh-Hans",
+		  unit: "c",
+		  theme: "auto",
+		  token: "133a4afe-a037-4923-96cb-a6fbf13417ec",
+		  hover: "enabled",
+		  container: "tp-weather-widget"
+		})
+	  </script>
+</div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -98,10 +114,11 @@
 			<a>总文章数：70</a>
 			<a>&nbsp;</a>
 			<a>总字数：<span class="post-count">57.7k</span></a>
-		</nav>
+		</nav>			
 
 	</header>		
 </div>
+
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
@@ -170,112 +187,6 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-Demo01Generic" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/28/Demo01Generic/">Demo01Generic</a>
-    </h1>
-  
-
-  
-  <a href="/2020/03/28/Demo01Generic/" class="archive-article-date">
-  	<time datetime="2020-03-28T02:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
-</a>
-  
-  
-    
-
-  
-  </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-	
-		
-
-					<p>Generic.Demo01Generic</p>
-				
-		
-		
-		
-			
-		
-		  
-		  
-		
-		
-		  <div class="declare" hidden="hidden"></div>
-						  
-		
-    </div>
-
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Generic</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/初学JAVA//" class="article-tag-list-link color2">初学JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/28/Demo01Generic/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
   
     <article id="post-Demo01InnerClassThread" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -383,19 +294,19 @@
 
 
   
-    <article id="post-Demo01GetThreadName" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Demo01Debug" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/28/Demo01GetThreadName/">Demo01GetThreadName</a>
+      <a class="article-title" href="/2020/03/28/Demo01Debug/">Demo01Debug</a>
     </h1>
   
 
   
-  <a href="/2020/03/28/Demo01GetThreadName/" class="archive-article-date">
+  <a href="/2020/03/28/Demo01Debug/" class="archive-article-date">
   	<time datetime="2020-03-28T02:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
 </a>
   
@@ -409,7 +320,7 @@
 	
 		
 
-					<p>GetName.Demo01GetThreadName</p>
+					<p>Debug.Demo01Debug</p>
 				
 		
 		
@@ -434,7 +345,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">GetName</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Debug</a>
         		</li>
       		
 		</ul>
@@ -456,7 +367,113 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/28/Demo01GetThreadName/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/03/28/Demo01Debug/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-Demo01Generic" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/28/Demo01Generic/">Demo01Generic</a>
+    </h1>
+  
+
+  
+  <a href="/2020/03/28/Demo01Generic/" class="archive-article-date">
+  	<time datetime="2020-03-28T02:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
+</a>
+  
+  
+    
+
+  
+  </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+	
+		
+
+					<p>Generic.Demo01Generic</p>
+				
+		
+		
+		
+			
+		
+		  
+		  
+		
+		
+		  <div class="declare" hidden="hidden"></div>
+						  
+		
+    </div>
+
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Generic</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/初学JAVA//" class="article-tag-list-link color2">初学JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/28/Demo01Generic/">展开全文 >></a>
         </p>
       
 
@@ -595,112 +612,6 @@
 
 
   
-    <article id="post-Demo01List" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/28/Demo01List/">Demo01List</a>
-    </h1>
-  
-
-  
-  <a href="/2020/03/28/Demo01List/" class="archive-article-date">
-  	<time datetime="2020-03-28T02:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
-</a>
-  
-  
-    
-
-  
-  </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-	
-		
-
-					<p>List.Demo01List</p>
-				
-		
-		
-		
-			
-		
-		  
-		  
-		
-		
-		  <div class="declare" hidden="hidden"></div>
-						  
-		
-    </div>
-
-	
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">List</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/初学JAVA//" class="article-tag-list-link color2">初学JAVA</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/28/Demo01List/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
     <article id="post-Demo01MainThread" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -775,6 +686,112 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/03/28/Demo01MainThread/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-Demo01List" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/28/Demo01List/">Demo01List</a>
+    </h1>
+  
+
+  
+  <a href="/2020/03/28/Demo01List/" class="archive-article-date">
+  	<time datetime="2020-03-28T02:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
+</a>
+  
+  
+    
+
+  
+  </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+	
+		
+
+					<p>List.Demo01List</p>
+				
+		
+		
+		
+			
+		
+		  
+		  
+		
+		
+		  <div class="declare" hidden="hidden"></div>
+						  
+		
+    </div>
+
+	
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">List</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/初学JAVA//" class="article-tag-list-link color2">初学JAVA</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/28/Demo01List/">展开全文 >></a>
         </p>
       
 
@@ -1357,6 +1374,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">批量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">WaitAndNotify</a>
               </li>
              
@@ -1365,19 +1386,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Debug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Exception</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Generic</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">InnerClassThread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1385,15 +1394,27 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">InnerClassThread</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Debug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Generic</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JDK9</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">List</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thread</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thread</a>
+                <a href="javascript:void(0)" class="js-tag color5">List</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1437,11 +1458,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">Runnable</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Runnable</a>
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1450,10 +1471,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">123</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">批量</a>
               </li>
             
             <div class="clearfix"></div>

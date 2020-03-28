@@ -201,29 +201,6 @@
   </entry>
   
   <entry>
-    <title>Demo01Debug</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.790Z</updated>
-    
-    <content type="html"><![CDATA[<p>Debug.Demo01Debug</p><a id="more"></a><p>package com.Debug;</p><p>/*<br>    Debug调试程序：<br>        可以让代码逐行执行，查看代码执行的过程，调试程序中出现的bug<br>    使用方法：<br>        在行号的右边，鼠标左键单击，添加断点（每个方法的第一行，哪里有bug就添加到哪里）<br>        右键，选择Debug执行程序<br>        程序就会停留在添加的第一行断点处<br>    执行程序：<br>        F8：逐行执行程序<br>        F7：进入到方法中<br>        Shift+F8：跳出方法<br>        F9：跳到下一个断点，如果没有下一个断点，就结束程序<br>        Ctrl+F2：退出Debug模式，停止程序<br>        Console：切换到控制台<br> */<br>public class Demo01Debug {<br>    public static void main(String[] args) {<br>//        int a = 10;<br>//        int b = 20;<br>//        int sum = a + b;<br>//        System.out.println(sum);</p><pre><code>    for (int i = 0; i &lt; 3; i++) {        System.out.println(i);    }}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Debug.Demo01Debug&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Debug" scheme="https://rzgongbowen.gitee.io/tags/Debug/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Demo01Exception</title>
     <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Exception/"/>
     <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Exception/</id>
@@ -243,52 +220,6 @@
     
     
       <category term="Exception" scheme="https://rzgongbowen.gitee.io/tags/Exception/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01Generic</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.801Z</updated>
-    
-    <content type="html"><![CDATA[<p>Generic.Demo01Generic</p><a id="more"></a><p>package com.Generic;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;</p><p>public class Demo01Generic {<br>    public static void main(String[] args) {<br>        ArrayList<String> list = new ArrayList&lt;&gt;();<br>        list.add(“aaa”);<br>        list.add(“bbb”);<br>        list.add(“ccc”);<br>        //使用迭代器遍历it集合<br>        Iterator<String> iterator = list.iterator();<br>        while (iterator.hasNext()) {<br>            String next = iterator.next();<br>            System.out.println(next);<br>        }</String></String></p><pre><code>    for (String s:list) {        System.out.println(s);    }}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Generic.Demo01Generic&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Generic" scheme="https://rzgongbowen.gitee.io/tags/Generic/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01InnerClassThread</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01InnerClassThread/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01InnerClassThread/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.844Z</updated>
-    
-    <content type="html"><![CDATA[<p>InnerClassThread.Demo01InnerClassThread</p><a id="more"></a><p>package com.Thread.InnerClassThread;</p><p>/*<br>    匿名内部类方式实现线程的创建</p><pre><code>匿名：没有名字内部类：写在其他内部的类匿名内部类：简化代码    把子类继承父类，重写父类的方法。创建子类对象合一步完成    把实现类实现接口，重写接口中的方法，创建实现类对象合成一步完成匿名内部类的最终产物：子类/实现类对象，而这个类没有名字格式：    new 父类/接口() {        重写父类/接口中的方法    }</code></pre><p> */<br>public class Demo01InnerClassThread {<br>    public static void main(String[] args) {<br>        // 线程的父类是Thread<br>        new Thread() {<br>            @Override<br>            public void run() {<br>                for (int i = 0; i &lt; 20; i++) {<br>                    System.out.println(Thread.currentThread().getName() + “–&gt;” +i);<br>                }<br>            }<br>        }.start();</p><pre><code>    new Thread() {        @Override        public void run() {            for (int i = 20; i &lt; 40; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; +i);            }        }    }.start();    // 线程的接口Runnable    Runnable runnable = new Runnable() {        @Override        public void run() {            for (int i = 1000; i &lt; 1020; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; + i);            }        }    };    new Thread(runnable).start();    // 简化接口的方式    new Thread(new Runnable() {        @Override        public void run() {            for (int i = 2000; i &lt; 2020; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; + i);            }        }    }).start();}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;InnerClassThread.Demo01InnerClassThread&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="InnerClassThread" scheme="https://rzgongbowen.gitee.io/tags/InnerClassThread/"/>
     
   </entry>
   
@@ -316,6 +247,75 @@
   </entry>
   
   <entry>
+    <title>Demo01InnerClassThread</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01InnerClassThread/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01InnerClassThread/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.844Z</updated>
+    
+    <content type="html"><![CDATA[<p>InnerClassThread.Demo01InnerClassThread</p><a id="more"></a><p>package com.Thread.InnerClassThread;</p><p>/*<br>    匿名内部类方式实现线程的创建</p><pre><code>匿名：没有名字内部类：写在其他内部的类匿名内部类：简化代码    把子类继承父类，重写父类的方法。创建子类对象合一步完成    把实现类实现接口，重写接口中的方法，创建实现类对象合成一步完成匿名内部类的最终产物：子类/实现类对象，而这个类没有名字格式：    new 父类/接口() {        重写父类/接口中的方法    }</code></pre><p> */<br>public class Demo01InnerClassThread {<br>    public static void main(String[] args) {<br>        // 线程的父类是Thread<br>        new Thread() {<br>            @Override<br>            public void run() {<br>                for (int i = 0; i &lt; 20; i++) {<br>                    System.out.println(Thread.currentThread().getName() + “–&gt;” +i);<br>                }<br>            }<br>        }.start();</p><pre><code>    new Thread() {        @Override        public void run() {            for (int i = 20; i &lt; 40; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; +i);            }        }    }.start();    // 线程的接口Runnable    Runnable runnable = new Runnable() {        @Override        public void run() {            for (int i = 1000; i &lt; 1020; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; + i);            }        }    };    new Thread(runnable).start();    // 简化接口的方式    new Thread(new Runnable() {        @Override        public void run() {            for (int i = 2000; i &lt; 2020; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; + i);            }        }    }).start();}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;InnerClassThread.Demo01InnerClassThread&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="InnerClassThread" scheme="https://rzgongbowen.gitee.io/tags/InnerClassThread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Debug</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.790Z</updated>
+    
+    <content type="html"><![CDATA[<p>Debug.Demo01Debug</p><a id="more"></a><p>package com.Debug;</p><p>/*<br>    Debug调试程序：<br>        可以让代码逐行执行，查看代码执行的过程，调试程序中出现的bug<br>    使用方法：<br>        在行号的右边，鼠标左键单击，添加断点（每个方法的第一行，哪里有bug就添加到哪里）<br>        右键，选择Debug执行程序<br>        程序就会停留在添加的第一行断点处<br>    执行程序：<br>        F8：逐行执行程序<br>        F7：进入到方法中<br>        Shift+F8：跳出方法<br>        F9：跳到下一个断点，如果没有下一个断点，就结束程序<br>        Ctrl+F2：退出Debug模式，停止程序<br>        Console：切换到控制台<br> */<br>public class Demo01Debug {<br>    public static void main(String[] args) {<br>//        int a = 10;<br>//        int b = 20;<br>//        int sum = a + b;<br>//        System.out.println(sum);</p><pre><code>    for (int i = 0; i &lt; 3; i++) {        System.out.println(i);    }}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Debug.Demo01Debug&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Debug" scheme="https://rzgongbowen.gitee.io/tags/Debug/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Generic</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.801Z</updated>
+    
+    <content type="html"><![CDATA[<p>Generic.Demo01Generic</p><a id="more"></a><p>package com.Generic;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;</p><p>public class Demo01Generic {<br>    public static void main(String[] args) {<br>        ArrayList<String> list = new ArrayList&lt;&gt;();<br>        list.add(“aaa”);<br>        list.add(“bbb”);<br>        list.add(“ccc”);<br>        //使用迭代器遍历it集合<br>        Iterator<String> iterator = list.iterator();<br>        while (iterator.hasNext()) {<br>            String next = iterator.next();<br>            System.out.println(next);<br>        }</String></String></p><pre><code>    for (String s:list) {        System.out.println(s);    }}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Generic.Demo01Generic&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Generic" scheme="https://rzgongbowen.gitee.io/tags/Generic/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Demo01JDK9</title>
     <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01JDK9/"/>
     <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01JDK9/</id>
@@ -339,29 +339,6 @@
   </entry>
   
   <entry>
-    <title>Demo01List</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01List/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01List/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.815Z</updated>
-    
-    <content type="html"><![CDATA[<p>List.Demo01List</p><a id="more"></a><p>package com.List;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;<br>import java.util.List;</p><p>/*<br>    java.util.List接口 extends Collection接口<br>    List接口的特点：<br>        1.有序的集合，存储元素和取出元素的顺序是一致的（存储123 取出123）<br>        2.有索引，包含了一些带索引的方法<br>        3.允许存储重复的元素</p><pre><code>List接口中带索引的方法（特有）：    public void add(int index, E element): 将指定的元素，添加到该集合中的指定位置上    public E get(int index): 返回集合中指定位置的元素    public E remove(int index): 移除列表中指定位置的元素，返回的是被移除的元素    public E set(int index, E element): 用指定元素替换集合中指定位置的元素，返回值是更新前的元素注意：    操作索引的时候，一定要防止索引越界    IndexOutOfBoundsException： 集合索引越界异常    ArrayIndexOutOfBoundsException： 数组索引越界异常    StringIndexOutOfBoundsException： 字符串索引越界异常</code></pre><p> */<br>public class Demo01List {<br>    public static void main(String[] args) {<br>        // 创建List集合对象，多态<br>        List<String> list = new ArrayList&lt;&gt;();<br>        // 使用add方法往集合中添加元素<br>        list.add(“a”);<br>        list.add(“b”);<br>        list.add(“c”);<br>        list.add(“d”);<br>        list.add(“a”);<br>        // 打印集合<br>        System.out.println(list); // [a, b, c, d, a]  不是地址值，则重写了toString</String></p><pre><code>    // public void add(int index, E element): 将指定的元素，添加到该集合中的指定位置上    // 在b和c之间添加abc    list.add(2,&quot;abc&quot;);    System.out.println(list);    // public E remove(int index): 移除列表中指定位置的元素，返回的是被移除的元素    String remove = list.remove(1);    System.out.println(list);    System.out.println(&quot;被移除的元素：&quot; + remove);    // public E set(int index, E element): 用指定元素替换集合中指定位置的元素，返回值是更新前的元素    // 将abc替换为ABC    String abc = list.set(1, &quot;ABC&quot;);    System.out.println(list);    System.out.println(&quot;被替换的元素：&quot; + abc);    // List集合遍历有3种方式    // 使用普通的for循环    for (int i = 0; i &lt; list.size(); i++) {        // public E get(int index): 返回集合中指定位置的元素        String s = list.get(i);        System.out.println(s);    }    // 使用迭代器    Iterator&lt;String&gt; iterator = list.iterator();    while (iterator.hasNext()) {        String next = iterator.next();        System.out.println(next);    }    // 增强for循环    for (String s : list) {        System.out.println(s);    }    String s = list.get(10);    System.out.println(s); // IndexOutOfBoundsException 越界异常}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;List.Demo01List&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="List" scheme="https://rzgongbowen.gitee.io/tags/List/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Demo01MainThread</title>
     <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01MainThread/"/>
     <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01MainThread/</id>
@@ -381,6 +358,29 @@
     
     
       <category term="Thread" scheme="https://rzgongbowen.gitee.io/tags/Thread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01List</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01List/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01List/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.815Z</updated>
+    
+    <content type="html"><![CDATA[<p>List.Demo01List</p><a id="more"></a><p>package com.List;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;<br>import java.util.List;</p><p>/*<br>    java.util.List接口 extends Collection接口<br>    List接口的特点：<br>        1.有序的集合，存储元素和取出元素的顺序是一致的（存储123 取出123）<br>        2.有索引，包含了一些带索引的方法<br>        3.允许存储重复的元素</p><pre><code>List接口中带索引的方法（特有）：    public void add(int index, E element): 将指定的元素，添加到该集合中的指定位置上    public E get(int index): 返回集合中指定位置的元素    public E remove(int index): 移除列表中指定位置的元素，返回的是被移除的元素    public E set(int index, E element): 用指定元素替换集合中指定位置的元素，返回值是更新前的元素注意：    操作索引的时候，一定要防止索引越界    IndexOutOfBoundsException： 集合索引越界异常    ArrayIndexOutOfBoundsException： 数组索引越界异常    StringIndexOutOfBoundsException： 字符串索引越界异常</code></pre><p> */<br>public class Demo01List {<br>    public static void main(String[] args) {<br>        // 创建List集合对象，多态<br>        List<String> list = new ArrayList&lt;&gt;();<br>        // 使用add方法往集合中添加元素<br>        list.add(“a”);<br>        list.add(“b”);<br>        list.add(“c”);<br>        list.add(“d”);<br>        list.add(“a”);<br>        // 打印集合<br>        System.out.println(list); // [a, b, c, d, a]  不是地址值，则重写了toString</String></p><pre><code>    // public void add(int index, E element): 将指定的元素，添加到该集合中的指定位置上    // 在b和c之间添加abc    list.add(2,&quot;abc&quot;);    System.out.println(list);    // public E remove(int index): 移除列表中指定位置的元素，返回的是被移除的元素    String remove = list.remove(1);    System.out.println(list);    System.out.println(&quot;被移除的元素：&quot; + remove);    // public E set(int index, E element): 用指定元素替换集合中指定位置的元素，返回值是更新前的元素    // 将abc替换为ABC    String abc = list.set(1, &quot;ABC&quot;);    System.out.println(list);    System.out.println(&quot;被替换的元素：&quot; + abc);    // List集合遍历有3种方式    // 使用普通的for循环    for (int i = 0; i &lt; list.size(); i++) {        // public E get(int index): 返回集合中指定位置的元素        String s = list.get(i);        System.out.println(s);    }    // 使用迭代器    Iterator&lt;String&gt; iterator = list.iterator();    while (iterator.hasNext()) {        String next = iterator.next();        System.out.println(next);    }    // 增强for循环    for (String s : list) {        System.out.println(s);    }    String s = list.get(10);    System.out.println(s); // IndexOutOfBoundsException 越界异常}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;List.Demo01List&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="List" scheme="https://rzgongbowen.gitee.io/tags/List/"/>
     
   </entry>
   

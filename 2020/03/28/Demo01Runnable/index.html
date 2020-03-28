@@ -46,7 +46,23 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #4d4d4d">
+	<div id="tp-weather-widget"></div>
+	  <script>
+		(function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+		window.SeniverseWeatherWidget('show', {
+		  flavor: "slim",
+		  location: "WWKCX8PB3YE6",
+		  geolocation: true,
+		  language: "zh-Hans",
+		  unit: "c",
+		  theme: "auto",
+		  token: "133a4afe-a037-4923-96cb-a6fbf13417ec",
+		  hover: "enabled",
+		  container: "tp-weather-widget"
+		})
+	  </script>
+</div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -103,10 +119,11 @@
 			<a>总文章数：70</a>
 			<a>&nbsp;</a>
 			<a>总字数：<span class="post-count">57.7k</span></a>
-		</nav>
+		</nav>			
 
 	</header>		
 </div>
+
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
@@ -174,7 +191,8 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Demo01Runnable" class="article article-type-post " itemscope itemprop="blogPost">
+            
+<article id="post-Demo01Runnable" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -359,7 +377,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://rzgongbowen.gitee.io/gitee.io/2020/03/28/Demo01Runnable/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -432,7 +450,7 @@
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-  var notify = 'false' == true ? true : false;
+  var notify = 'true' == true ? true : false;
   var verify = 'false' == true ? true : false;
   new Valine({
     av: AV,
@@ -440,8 +458,8 @@
     notify: notify,
     app_id: "wI6Eurk5SfkCnUzDaMI9puyq-gzGzoHsz",
     app_key: "WhWKbbkK4HFI2Mt47qbkVlNd",
-    placeholder: "Just go go",
-    avatar: "mm",
+    placeholder: "评论",
+    avatar: "wavatar",
   });
 </script>
      </section>
@@ -568,6 +586,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">批量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">WaitAndNotify</a>
               </li>
              
@@ -576,19 +598,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Debug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Exception</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Generic</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">InnerClassThread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -596,15 +606,27 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">InnerClassThread</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Debug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Generic</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JDK9</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">List</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thread</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thread</a>
+                <a href="javascript:void(0)" class="js-tag color5">List</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -648,11 +670,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">Runnable</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Runnable</a>
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -661,10 +683,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">123</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">批量</a>
               </li>
             
             <div class="clearfix"></div>

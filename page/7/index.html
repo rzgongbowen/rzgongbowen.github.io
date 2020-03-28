@@ -41,7 +41,23 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #4d4d4d">
+	<div id="tp-weather-widget"></div>
+	  <script>
+		(function(a,h,g,f,e,d,c,b){b=function(){d=h.createElement(g);c=h.getElementsByTagName(g)[0];d.src=e;d.charset="utf-8";d.async=1;c.parentNode.insertBefore(d,c)};a["SeniverseWeatherWidgetObject"]=f;a[f]||(a[f]=function(){(a[f].q=a[f].q||[]).push(arguments)});a[f].l=+new Date();if(a.attachEvent){a.attachEvent("onload",b)}else{a.addEventListener("load",b,false)}}(window,document,"script","SeniverseWeatherWidget","//cdn.sencdn.com/widget2/static/js/bundle.js?t="+parseInt((new Date().getTime() / 100000000).toString(),10)));
+		window.SeniverseWeatherWidget('show', {
+		  flavor: "slim",
+		  location: "WWKCX8PB3YE6",
+		  geolocation: true,
+		  language: "zh-Hans",
+		  unit: "c",
+		  theme: "auto",
+		  token: "133a4afe-a037-4923-96cb-a6fbf13417ec",
+		  hover: "enabled",
+		  container: "tp-weather-widget"
+		})
+	  </script>
+</div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -98,10 +114,11 @@
 			<a>总文章数：70</a>
 			<a>&nbsp;</a>
 			<a>总字数：<span class="post-count">57.7k</span></a>
-		</nav>
+		</nav>			
 
 	</header>		
 </div>
+
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
@@ -171,19 +188,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-RegisterException" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Person" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/28/RegisterException/">RegisterException</a>
+      <a class="article-title" href="/2020/03/28/Person/">Person</a>
     </h1>
   
 
   
-  <a href="/2020/03/28/RegisterException/" class="archive-article-date">
+  <a href="/2020/03/28/Person/" class="archive-article-date">
   	<time datetime="2020-03-28T02:35:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-28</time>
 </a>
   
@@ -197,7 +214,7 @@
 	
 		
 
-					<p>MyException.RegisterException</p>
+					<p>Thread.Person</p>
 				
 		
 		
@@ -222,7 +239,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">MyException</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thread</a>
         		</li>
       		
 		</ul>
@@ -244,7 +261,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/28/RegisterException/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/03/28/Person/">展开全文 >></a>
         </p>
       
 
@@ -1302,6 +1319,10 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">批量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">WaitAndNotify</a>
               </li>
              
@@ -1310,19 +1331,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Debug</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Exception</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Generic</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">InnerClassThread</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1330,15 +1339,27 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">InnerClassThread</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Debug</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Generic</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JDK9</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">List</a>
+                <a href="javascript:void(0)" class="js-tag color2">Thread</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thread</a>
+                <a href="javascript:void(0)" class="js-tag color5">List</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1382,11 +1403,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
+                <a href="javascript:void(0)" class="js-tag color4">Runnable</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Runnable</a>
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1395,10 +1416,6 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">123</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">批量</a>
               </li>
             
             <div class="clearfix"></div>
