@@ -40,17 +40,17 @@
   </entry>
   
   <entry>
-    <title>BaoZiPu</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/</id>
+    <title>Chihuo</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Chihuo/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Chihuo/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.871Z</updated>
+    <updated>2020-03-28T02:36:45.872Z</updated>
     
-    <content type="html"><![CDATA[<p>WaitAndNotify.BaoZiPu</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    生产者（包子铺）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：生产包子<br>    对包子的状态进行判断<br>    true：有包子<br>        包子铺调用wait方法进入等待状态<br>    false：没有包子<br>        包子铺生产包子<br>        增加趣味：交替生产两种包子<br>            两种状态（i%2 == 0）<br>        包子铺生产好了包子<br>        修改包子的状态为true有<br>        唤醒吃货线程，让吃货线程吃包子<br>    注意：<br>        包子铺线程和包子线程关系–&gt;通信（互斥）<br>        必须使用同步技术保证两个线程只能有一个在执行<br>        锁对象必须保证唯一，可以使用包子对象作为锁对象<br>        包子铺类和吃货类就需要把包子对象作为参数传递进来<br>            1.需要在成员位置创建一个包子变量<br>            2.使用带参数构造方法，为这个包子变量赋值<br> */<br>public class BaoZiPu extends Thread {<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public BaoZiPu(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：生产包子@Overridepublic void run() {    // 定义一个变量    int count = 0;    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子的状态进行判断            if (baoZi.flag == true) {                // 包子铺调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            // 被唤醒之后执行，包子铺生产包子            // 增加趣味：交替生产两种包子 两种状态（i%2 == 0）            if (count % 2 == 0) {                baoZi.pi = &quot;薄皮&quot;;                baoZi.xian = &quot;三鲜馅&quot;;            } else {                baoZi.pi = &quot;厚皮&quot;;                baoZi.xian = &quot;牛肉大葱馅&quot;;            }            count++;            System.out.println(&quot;包子铺正在生产&quot; + baoZi.pi + baoZi.xian);            // 需要3秒做包子            try {                Thread.sleep(3000);            } catch (InterruptedException e) {                e.printStackTrace();            }            // 包子铺生产好了包子            // 修改包子的状态为true有            baoZi.flag = true;            // 唤醒吃货线程，让吃货线程吃包子            baoZi.notify();            System.out.println(&quot;包子铺已经生产完&quot; + baoZi.pi + baoZi.xian);        }    }}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>WaitAndNotify.Chihuo</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    消费者（吃货）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：吃包子<br>    对包子状态进行判断<br>    false：没有包子<br>        吃货调用wait方法进入等待状态<br>    true：有包子<br>        吃货吃包子<br>        吃货吃完包子<br>        修改包子状态为false没有<br>        吃货唤醒包子铺生产包子<br> */<br>public class Chihuo extends Thread{<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public Chihuo(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：吃包子@Overridepublic void run() {    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子状态进行判断            if (baoZi.flag == false)  {                // 吃货调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            /*吃货吃包子                    吃货吃完包子            修改包子状态为false没有                    吃货唤醒包子铺生产包子*/            // 吃货吃包子            System.out.println(&quot;正在吃包子&quot; + baoZi.pi + baoZi.xian);            //  吃货吃完包子 修改包子状态为false没有            baoZi.flag = false;            // 吃货唤醒包子铺生产包子            baoZi.notify();            System.out.println(baoZi.pi + baoZi.xian + &quot;已吃完，包子铺开始生产包子&quot;);            System.out.println(&quot;==============================================&quot;);        }    }}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;WaitAndNotify.BaoZiPu&lt;/p&gt;
+      &lt;p&gt;WaitAndNotify.Chihuo&lt;/p&gt;
     
     </summary>
     
@@ -63,40 +63,17 @@
   </entry>
   
   <entry>
-    <title>Demo01Collections</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Collections/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Collections/</id>
+    <title>BaoZiPu</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.780Z</updated>
+    <updated>2020-03-28T02:36:45.871Z</updated>
     
-    <content type="html"><![CDATA[<p>Collections.Demo01Collections</p><a id="more"></a><p>package com.Collections;</p><p>import java.util.ArrayList;<br>import java.util.Collections;</p><p>/*<br>    java.util.Collections是集合工具类，用来对集合进行操作。部分方法如下：<br>        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br> */<br>public class Demo01Collections {<br>    public static void main(String[] args) {<br>        ArrayList<String> arrayList = new ArrayList&lt;&gt;();<br>//        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        Collections.addAll(arrayList,”a”,”b”,”c”,”d”);</T></T></String></T></T></p><pre><code>System.out.println(arrayList); // [a, b, c, d]</code></pre><p>//        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br>        Collections.shuffle(arrayList);<br>        System.out.println(arrayList); // [c, b, a, d]</p><pre><code>}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>WaitAndNotify.BaoZiPu</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    生产者（包子铺）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：生产包子<br>    对包子的状态进行判断<br>    true：有包子<br>        包子铺调用wait方法进入等待状态<br>    false：没有包子<br>        包子铺生产包子<br>        增加趣味：交替生产两种包子<br>            两种状态（i%2 == 0）<br>        包子铺生产好了包子<br>        修改包子的状态为true有<br>        唤醒吃货线程，让吃货线程吃包子<br>    注意：<br>        包子铺线程和包子线程关系–&gt;通信（互斥）<br>        必须使用同步技术保证两个线程只能有一个在执行<br>        锁对象必须保证唯一，可以使用包子对象作为锁对象<br>        包子铺类和吃货类就需要把包子对象作为参数传递进来<br>            1.需要在成员位置创建一个包子变量<br>            2.使用带参数构造方法，为这个包子变量赋值<br> */<br>public class BaoZiPu extends Thread {<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public BaoZiPu(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：生产包子@Overridepublic void run() {    // 定义一个变量    int count = 0;    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子的状态进行判断            if (baoZi.flag == true) {                // 包子铺调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            // 被唤醒之后执行，包子铺生产包子            // 增加趣味：交替生产两种包子 两种状态（i%2 == 0）            if (count % 2 == 0) {                baoZi.pi = &quot;薄皮&quot;;                baoZi.xian = &quot;三鲜馅&quot;;            } else {                baoZi.pi = &quot;厚皮&quot;;                baoZi.xian = &quot;牛肉大葱馅&quot;;            }            count++;            System.out.println(&quot;包子铺正在生产&quot; + baoZi.pi + baoZi.xian);            // 需要3秒做包子            try {                Thread.sleep(3000);            } catch (InterruptedException e) {                e.printStackTrace();            }            // 包子铺生产好了包子            // 修改包子的状态为true有            baoZi.flag = true;            // 唤醒吃货线程，让吃货线程吃包子            baoZi.notify();            System.out.println(&quot;包子铺已经生产完&quot; + baoZi.pi + baoZi.xian);        }    }}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Collections.Demo01Collections&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Collections" scheme="https://rzgongbowen.gitee.io/tags/Collections/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chihuo</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Chihuo/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Chihuo/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.872Z</updated>
-    
-    <content type="html"><![CDATA[<p>WaitAndNotify.Chihuo</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    消费者（吃货）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：吃包子<br>    对包子状态进行判断<br>    false：没有包子<br>        吃货调用wait方法进入等待状态<br>    true：有包子<br>        吃货吃包子<br>        吃货吃完包子<br>        修改包子状态为false没有<br>        吃货唤醒包子铺生产包子<br> */<br>public class Chihuo extends Thread{<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public Chihuo(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：吃包子@Overridepublic void run() {    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子状态进行判断            if (baoZi.flag == false)  {                // 吃货调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            /*吃货吃包子                    吃货吃完包子            修改包子状态为false没有                    吃货唤醒包子铺生产包子*/            // 吃货吃包子            System.out.println(&quot;正在吃包子&quot; + baoZi.pi + baoZi.xian);            //  吃货吃完包子 修改包子状态为false没有            baoZi.flag = false;            // 吃货唤醒包子铺生产包子            baoZi.notify();            System.out.println(baoZi.pi + baoZi.xian + &quot;已吃完，包子铺开始生产包子&quot;);            System.out.println(&quot;==============================================&quot;);        }    }}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;WaitAndNotify.Chihuo&lt;/p&gt;
+      &lt;p&gt;WaitAndNotify.BaoZiPu&lt;/p&gt;
     
     </summary>
     
@@ -128,6 +105,29 @@
     
     
       <category term="WaitAndNotify" scheme="https://rzgongbowen.gitee.io/tags/WaitAndNotify/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Collections</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Collections/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Collections/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.780Z</updated>
+    
+    <content type="html"><![CDATA[<p>Collections.Demo01Collections</p><a id="more"></a><p>package com.Collections;</p><p>import java.util.ArrayList;<br>import java.util.Collections;</p><p>/*<br>    java.util.Collections是集合工具类，用来对集合进行操作。部分方法如下：<br>        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br> */<br>public class Demo01Collections {<br>    public static void main(String[] args) {<br>        ArrayList<String> arrayList = new ArrayList&lt;&gt;();<br>//        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        Collections.addAll(arrayList,”a”,”b”,”c”,”d”);</T></T></String></T></T></p><pre><code>System.out.println(arrayList); // [a, b, c, d]</code></pre><p>//        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br>        Collections.shuffle(arrayList);<br>        System.out.println(arrayList); // [c, b, a, d]</p><pre><code>}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Collections.Demo01Collections&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Collections" scheme="https://rzgongbowen.gitee.io/tags/Collections/"/>
     
   </entry>
   
@@ -201,29 +201,6 @@
   </entry>
   
   <entry>
-    <title>Demo01GetThreadName</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01GetThreadName/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01GetThreadName/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.840Z</updated>
-    
-    <content type="html"><![CDATA[<p>GetName.Demo01GetThreadName</p><a id="more"></a><p>package com.Thread.GetName;</p><p>/*<br>    线程名称：<br>        主线程：main<br>        新线程：Thread-0，Thread-1，Thread-2<br> */<br>public class Demo01GetThreadName {<br>    public static void main(String[] args) {<br>        // 创建Thread类的子类对象<br>        MyThread myThread = new MyThread();<br>        // 调用start方法，开启新线程。执行run方法<br>        myThread.start();</p><pre><code>    new MyThread().start();    new MyThread().start();    System.out.println(Thread.currentThread().getName());}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;GetName.Demo01GetThreadName&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="GetName" scheme="https://rzgongbowen.gitee.io/tags/GetName/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Demo01InnerClassThread</title>
     <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01InnerClassThread/"/>
     <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01InnerClassThread/</id>
@@ -243,6 +220,29 @@
     
     
       <category term="InnerClassThread" scheme="https://rzgongbowen.gitee.io/tags/InnerClassThread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01GetThreadName</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01GetThreadName/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01GetThreadName/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.840Z</updated>
+    
+    <content type="html"><![CDATA[<p>GetName.Demo01GetThreadName</p><a id="more"></a><p>package com.Thread.GetName;</p><p>/*<br>    线程名称：<br>        主线程：main<br>        新线程：Thread-0，Thread-1，Thread-2<br> */<br>public class Demo01GetThreadName {<br>    public static void main(String[] args) {<br>        // 创建Thread类的子类对象<br>        MyThread myThread = new MyThread();<br>        // 调用start方法，开启新线程。执行run方法<br>        myThread.start();</p><pre><code>    new MyThread().start();    new MyThread().start();    System.out.println(Thread.currentThread().getName());}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;GetName.Demo01GetThreadName&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="GetName" scheme="https://rzgongbowen.gitee.io/tags/GetName/"/>
     
   </entry>
   
@@ -316,6 +316,29 @@
   </entry>
   
   <entry>
+    <title>Demo01Map</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Map/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Map/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.817Z</updated>
+    
+    <content type="html"><![CDATA[<p>Map.Demo01Map</p><a id="more"></a><p>package com.Map;</p><p>import java.util.HashMap;<br>import java.util.Map;</p><p>/*<br>    java.util.Map&lt;k,v&gt; 集合<br>    Map集合的特点：<br>        1.Map集合是一个双列集合，一个元素包含两个值(一个key,一个value)<br>        2.Map集合中的元素，key和value的数据类型可以相同，也可以不同<br>        3.Map集合中的元素，key是不允许重复的，value可以重复<br>        4.Map集合中的元素，key和value是一一对应的<br>    java.util.HashMap&lt;k,v&gt;集合 implements Map&lt;k,v&gt;接口<br>    HashMap集合的特点：<br>        1.HashMap集合底层是哈希表：查询的速度特别快<br>        2.HashMap集合是一个无序的集合，存储元素与取出的元素有可能不一致<br>    java.util.LinkedHashMap&lt;k,v&gt;集合 extends HashMap(k,v) 集合<br>    LinkedHAshMap的特点：<br>        1.LinkedHashMap集合底层是哈希表+链表（保证迭代的顺序）<br>        2.LinkedHashMap集合是一个有序的集合。存储元素和取出元素的顺序一致<br> */<br>public class Demo01Map {<br>    public static void main(String[] args) {<br>        show01();<br>        System.out.println(“=======================”);<br>        show02();<br>        System.out.println(“=======================”);<br>        show03();<br>        System.out.println(“=======================”);<br>        show04();<br>    }</p><pre><code>/*    boolean containsKey(Object key) 判断集合中是否包含指定的键    包含返回true，不包含返回false */private static void show04() {    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();    map.put(&quot;第一&quot;,1);    map.put(&quot;第二&quot;,2);    map.put(&quot;第三&quot;,3);    map.put(&quot;第四&quot;,4);    boolean get1 = map.containsKey(&quot;第一&quot;);    System.out.println(get1); // true    boolean get2 = map.containsKey(&quot;第五&quot;);    System.out.println(get2); // false}/*    public V get(Object key) 根据指定的键，在Map集合中获取对应的值    返回值：        key存在，返回对应的value值        key不存在，返回null */private static void show03() {    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();    map.put(&quot;第一&quot;,1);    map.put(&quot;第二&quot;,2);    map.put(&quot;第三&quot;,3);    map.put(&quot;第四&quot;,4);    Integer get1 = map.get(&quot;第一&quot;);    System.out.println(get1); // 1    Integer get2 = map.get(&quot;第五&quot;);    System.out.println(get2); // null}/*    public V remove(Object key)：把指定的键所对应的键值对元素 在Map集合中删除。返回被删除元素的值 */private static void show02() {    // 创建Map集合对象，多态    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();    String v1 = map.put(&quot;小米&quot;, &quot;小花&quot;);    System.out.println(v1); // null    String v2 = map.put(&quot;小米&quot;, &quot;小花花&quot;);    System.out.println(v2); // 小花    System.out.println(map); // {小米=小花花}    map.put(&quot;1&quot;, &quot;2&quot;);    map.put(&quot;3&quot;, &quot;2&quot;);    map.put(&quot;4&quot;, &quot;4&quot;);    System.out.println(map);    String remove = map.remove(&quot;1&quot;);    System.out.println(remove);    System.out.println(map);}/*    public v put(K key, V value)：把指定的键与指定的值添加到Map集合中去        返回值: v            存储键值对时，key不重复，返回值v是null            存储键值对时，key重复，会使用新的value替换map中重复的value，返回被替换的value值 */private static void show01() {    // 创建Map集合对象，多态    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();    String v1 = map.put(&quot;小米&quot;, &quot;小花&quot;);    System.out.println(v1); // null    String v2 = map.put(&quot;小米&quot;, &quot;小花花&quot;);    System.out.println(v2); // 小花    System.out.println(map); // {小米=小花花}    map.put(&quot;1&quot;, &quot;2&quot;);    map.put(&quot;3&quot;, &quot;2&quot;);    map.put(&quot;4&quot;, &quot;4&quot;);    System.out.println(map);}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Map.Demo01Map&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Map" scheme="https://rzgongbowen.gitee.io/tags/Map/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Demo01RegisterException</title>
     <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01RegisterException/"/>
     <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01RegisterException/</id>
@@ -339,6 +362,29 @@
   </entry>
   
   <entry>
+    <title>Demo01Runnable</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.863Z</updated>
+    
+    <content type="html"><![CDATA[<p>Lambda.Demo01Runnable</p><a id="more"></a><p>package com.ThreadAndLambda.Lambda;</p><p>/*<br>    使用实现Runnable接口的方式实现多线程程序<br> */<br>public class Demo01Runnable {<br>    public static void main(String[] args) {<br>        // 创建Runnable接口的实现类对象<br>        RunnableImpl runnable = new RunnableImpl();<br>        // 创建Thread类对象，构造方法中传递Runnable接口的实现类<br>        Thread thread = new Thread(runnable);<br>        // 调用start方法开启新线程，执行run方法<br>        thread.run();</p><pre><code>    // 简化代码，使用匿名内部类，实现多线程    Runnable runnable1 = new Runnable(){        @Override        public void run() {            System.out.println(Thread.currentThread().getName() + &quot;新线程创建了&quot;);        }    };    new Thread(runnable1).start();    // 简化代码    new Thread(new Runnable() {        @Override        public void run() {            System.out.println(Thread.currentThread().getName() + &quot;新线程创建了&quot;);        }    }).start();}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Lambda.Demo01Runnable&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Lambda" scheme="https://rzgongbowen.gitee.io/tags/Lambda/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Demo01Set</title>
     <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Set/"/>
     <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Set/</id>
@@ -358,6 +404,75 @@
     
     
       <category term="Set" scheme="https://rzgongbowen.gitee.io/tags/Set/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01SetThreadName</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01SetThreadName/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01SetThreadName/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.852Z</updated>
+    
+    <content type="html"><![CDATA[<p>SetName.Demo01SetThreadName</p><a id="more"></a><p>package com.Thread.SetName;</p><p>public class Demo01SetThreadName {<br>    public static void main(String[] args) {<br>        // 开启多线程<br>        MyThread myThread = new MyThread();<br>        myThread.setName(“111”);<br>        myThread.start();</p><pre><code>    // 开启多线程    new MyThread(&quot;222&quot;).start();}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SetName.Demo01SetThreadName&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="SetName" scheme="https://rzgongbowen.gitee.io/tags/SetName/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Sleep</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Sleep/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Sleep/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.855Z</updated>
+    
+    <content type="html"><![CDATA[<p>Sleep.Demo01Sleep</p><a id="more"></a><p>package com.Thread.Sleep;</p><p>/*<br>    static void sleep(long millis) 在指定的毫秒数内让当前正在执行的线程休眠（暂停执行）<br>    毫秒数结束后，线程继续执行<br> */<br>public class Demo01Sleep {<br>    public static void main(String[] args) {<br>        // 模拟秒表<br>        for (int i = 0; i &lt; 20; i++) {<br>            System.out.println(i);<br>            try {<br>                Thread.sleep(1000);<br>            } catch (InterruptedException e) {<br>                e.printStackTrace();<br>            }<br>        }<br>    }<br>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Sleep.Demo01Sleep&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Sleep" scheme="https://rzgongbowen.gitee.io/tags/Sleep/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01ThreadPool</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01ThreadPool/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01ThreadPool/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.867Z</updated>
+    
+    <content type="html"><![CDATA[<p>ThreadPool.Demo01ThreadPool</p><a id="more"></a><p>package com.ThreadAndLambda.ThreadPool;</p><p>import java.util.concurrent.ExecutorService;<br>import java.util.concurrent.Executors;<br>/*<br>    线程池<br>    java.util.concurrent.Executors：线程池的工厂类，用来生成线程池<br>    Executors类中的静态方法：<br>        static ExecutorService newFixedThreadPool(int nThreads) 创建一个可重用固定线程数的线程池，以共享的无界队列方式来运行这些线程<br>        参数：<br>            int nThreads：创建线程池中包含的线程数量<br>        返回值：<br>            ExecutorService接口，返回的是ExecutorService接口的实现类对象，我们可以使用ExecutorService接口接收（面向接口编程）<br>    java.util.concurrent.ExecutorService：线程池接口<br>        用来从线程池中获取线程，调用start方法，执行线程任务<br>            submit(Runnable task) 提交一个 Runnable 任务用于执行<br>        关闭/销毁线程池的方法<br>             void shutdown()<br>    线程池的使用步骤：<br>        1.使用线程的工厂类Executors里提供的静态方法newFixedThreadPool生产一个指定线程数量的线程池<br>        2.创建一个类，实现Runnable接口，重写run方法，设置线程任务<br>        3.调用ExecutorService中的方法submit，传递线程任务（实现类），开启线程，执行run方法<br>        4.调用ExecutorService中的方法shutdown销毁线程池（不建议使用）<br> */<br>public class Demo01ThreadPool {<br>    public static void main(String[] args) {<br>        // 1.使用线程的工厂类Executors里提供的静态方法newFixedThreadPool生产一个指定线程数量的线程池<br>        ExecutorService executorService = Executors.newFixedThreadPool(3);<br>        // 3.调用ExecutorService中的方法submit，传递线程任务（实现类），开启线程，执行run方法<br>        executorService.submit(new RunnableImpl());<br>        executorService.submit(new RunnableImpl());<br>        executorService.submit(new RunnableImpl());<br>        executorService.submit(new RunnableImpl());<br>        // 4.调用ExecutorService中的方法shutdown销毁线程池（不建议使用）<br>        executorService.shutdown();<br>    }<br>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ThreadPool.Demo01ThreadPool&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="ThreadPool" scheme="https://rzgongbowen.gitee.io/tags/ThreadPool/"/>
     
   </entry>
   
