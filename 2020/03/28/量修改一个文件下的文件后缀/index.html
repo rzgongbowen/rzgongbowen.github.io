@@ -6,16 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://rzgongbowen.gitee.io">
-  <title>批量修改一个文件下的文件后缀 | Gong bowen&#39;s blog</title>
+  <title>批量修改目录下文件的后缀 | Gong bowen&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“.java” –&gt; “.md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“.md”文件，移动到“\source_posts”目录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="批量修改一个文件下的文件后缀">
+<meta property="og:title" content="批量修改目录下文件的后缀">
 <meta property="og:url" content="https://rzgongbowen.gitee.io/2020/03/28/%E9%87%8F%E4%BF%AE%E6%94%B9%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E4%B8%8B%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80/index.html">
 <meta property="og:site_name" content="Gong bowen&#39;s blog">
 <meta property="og:description" content="分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“.java” –&gt; “.md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“.md”文件，移动到“\source_posts”目录">
 <meta property="article:published_time" content="2020-03-28T08:22:00.000Z">
-<meta property="article:modified_time" content="2020-03-28T08:52:08.804Z">
+<meta property="article:modified_time" content="2020-03-28T09:00:37.011Z">
 <meta property="article:author" content="Gong Bowen">
 <meta property="article:tag" content="批量">
 <meta name="twitter:card" content="summary">
@@ -181,7 +181,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      批量修改一个文件下的文件后缀
+      批量修改目录下文件的后缀
     </h1>
   
 
@@ -199,7 +199,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->  
 	  <img src="http://q7qsg2lhu.bkt.clouddn.com/stats_24px_1195963_easyicon.net.png" style="width:24px; height:24px" />
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">381字</span>
+      <span class="post-count">379字</span>
     </span>
   </span>
 
@@ -232,7 +232,9 @@
 		
 
 			
-				<h5 id="分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“-java”-–-gt-“-md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“-md”文件，移动到“-source-posts”目录下，再通过Git命令即可发表-hexo-cl-hexo-g，hexo-d…"><a href="#分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“-java”-–-gt-“-md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“-md”文件，移动到“-source-posts”目录下，再通过Git命令即可发表-hexo-cl-hexo-g，hexo-d…" class="headerlink" title="分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“.java” –&gt; “.md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“.md”文件，移动到“\source_posts”目录下，再通过Git命令即可发表(hexo cl,hexo g，hexo d…)"></a>分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“.java” –&gt; “.md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“.md”文件，移动到“\source_posts”目录下，再通过Git命令即可发表(hexo cl,hexo g，hexo d…)</h5><h5 id="话不多说，本文重点如下："><a href="#话不多说，本文重点如下：" class="headerlink" title="话不多说，本文重点如下："></a>话不多说，本文重点如下：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"># 批量修改一个文件下的文件后缀</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">path &#x3D; input(&quot;请输入你需要操作的目录(格式如&#39;D:\\test&#39;)：&quot;)</span><br><span class="line"></span><br><span class="line">def get_filelist(dir):</span><br><span class="line">    Filelist &#x3D; []</span><br><span class="line">    for home, dirs, files in os.walk(path):</span><br><span class="line">        for filename in files:</span><br><span class="line">             # 文件名列表，包含完整路径</span><br><span class="line">            Filelist.append(os.path.join(home, filename))</span><br><span class="line">             # 文件名列表，只包含文件名</span><br><span class="line">             # Filelist.append( filename)</span><br><span class="line">    return Filelist</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    Filelist &#x3D; get_filelist(dir)</span><br><span class="line">    print(len(Filelist))</span><br><span class="line">    count &#x3D; 0</span><br><span class="line">    for file in Filelist:</span><br><span class="line">        Olddir &#x3D; file</span><br><span class="line">        print(Olddir)</span><br><span class="line">        if Olddir.split(&#39;.&#39;)[-1] &#x3D;&#x3D; &#39;java&#39;:</span><br><span class="line">            count +&#x3D; 1</span><br><span class="line">            Newdir &#x3D; Olddir.replace(&#39;.java&#39;, &#39;.md&#39;)  # 修改指定的后缀</span><br><span class="line">            os.rename(Olddir, Newdir)</span><br><span class="line">            print(Olddir, &#39;--&gt;&#39;, Newdir )</span><br><span class="line">    print(&#39;修改了&#39;,count,&#39;个&#39;)</span><br></pre></td></tr></table></figure>
+				<h5 id="分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“-java”-–-gt-“-md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“-md”文件，移动到“-source-posts”目录下，再通过Git命令即可发表-hexo-cl-hexo-g，hexo-d…"><a href="#分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“-java”-–-gt-“-md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“-md”文件，移动到“-source-posts”目录下，再通过Git命令即可发表-hexo-cl-hexo-g，hexo-d…" class="headerlink" title="分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“.java” –&gt; “.md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“.md”文件，移动到“\source_posts”目录下，再通过Git命令即可发表(hexo cl,hexo g，hexo d…)"></a>分享一个如何批量修改文件后缀名（包含该路径下的所有文件夹）的源码，用python编写的，今天突发奇想，想把之前学习练习的java源码作为Hexo的博客发表，首先自然就是修改为Markdown格式，那就是“.java” –&gt; “.md”，然后再将Markdown文件添加上头数据，使得Markdown符合Hexo博客文章的格式，再将修改好的“.md”文件，移动到“\source_posts”目录下，再通过Git命令即可发表(hexo cl,hexo g，hexo d…)</h5><a id="more"></a>
+
+<h5 id="话不多说，本文重点如下："><a href="#话不多说，本文重点如下：" class="headerlink" title="话不多说，本文重点如下："></a>话不多说，本文重点如下：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"># 批量修改目录下文件的后缀</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">path &#x3D; input(&quot;请输入你需要操作的目录(格式如&#39;D:\\test&#39;)：&quot;)</span><br><span class="line"></span><br><span class="line">def get_filelist(dir):</span><br><span class="line">    Filelist &#x3D; []</span><br><span class="line">    for home, dirs, files in os.walk(path):</span><br><span class="line">        for filename in files:</span><br><span class="line">             # 文件名列表，包含完整路径</span><br><span class="line">            Filelist.append(os.path.join(home, filename))</span><br><span class="line">             # 文件名列表，只包含文件名</span><br><span class="line">             # Filelist.append( filename)</span><br><span class="line">    return Filelist</span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &quot;__main__&quot;:</span><br><span class="line">    Filelist &#x3D; get_filelist(dir)</span><br><span class="line">    print(len(Filelist))</span><br><span class="line">    count &#x3D; 0</span><br><span class="line">    for file in Filelist:</span><br><span class="line">        Olddir &#x3D; file</span><br><span class="line">        print(Olddir)</span><br><span class="line">        if Olddir.split(&#39;.&#39;)[-1] &#x3D;&#x3D; &#39;java&#39;:</span><br><span class="line">            count +&#x3D; 1</span><br><span class="line">            Newdir &#x3D; Olddir.replace(&#39;.java&#39;, &#39;.md&#39;)  # 修改指定的后缀</span><br><span class="line">            os.rename(Olddir, Newdir)</span><br><span class="line">            print(Olddir, &#39;--&gt;&#39;, Newdir )</span><br><span class="line">    print(&#39;修改了&#39;,count,&#39;个&#39;)</span><br></pre></td></tr></table></figure>
 
 <p>将java文件修改为Hexo文章发表的另外两个工具将在后续的文章说明…<br>本人水平有限，仅此记录下自己的修改过程，让各位大佬见笑了，有什么建议可以在评论区留言，一起进步！</p>
 
@@ -286,7 +288,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/python编写的小功能//" class="article-tag-list-link color3">python编写的小功能</a>
+        			<a href="/categories/Python编写的小功能//" class="article-tag-list-link color3">Python编写的小功能</a>
         		</li>
       		
 		</ul>
@@ -359,7 +361,7 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          批量修改目录下文件的后缀
+          批量遍历目录下文件在文件头位置添加数据
         
       </div>
     </a>
