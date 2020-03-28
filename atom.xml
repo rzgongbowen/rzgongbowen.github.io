@@ -109,17 +109,17 @@
   </entry>
   
   <entry>
-    <title>Chihuo</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Chihuo/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Chihuo/</id>
+    <title>BaoZiPu</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.872Z</updated>
+    <updated>2020-03-28T02:36:45.871Z</updated>
     
-    <content type="html"><![CDATA[<p>WaitAndNotify.Chihuo</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    消费者（吃货）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：吃包子<br>    对包子状态进行判断<br>    false：没有包子<br>        吃货调用wait方法进入等待状态<br>    true：有包子<br>        吃货吃包子<br>        吃货吃完包子<br>        修改包子状态为false没有<br>        吃货唤醒包子铺生产包子<br> */<br>public class Chihuo extends Thread{<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public Chihuo(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：吃包子@Overridepublic void run() {    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子状态进行判断            if (baoZi.flag == false)  {                // 吃货调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            /*吃货吃包子                    吃货吃完包子            修改包子状态为false没有                    吃货唤醒包子铺生产包子*/            // 吃货吃包子            System.out.println(&quot;正在吃包子&quot; + baoZi.pi + baoZi.xian);            //  吃货吃完包子 修改包子状态为false没有            baoZi.flag = false;            // 吃货唤醒包子铺生产包子            baoZi.notify();            System.out.println(baoZi.pi + baoZi.xian + &quot;已吃完，包子铺开始生产包子&quot;);            System.out.println(&quot;==============================================&quot;);        }    }}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>WaitAndNotify.BaoZiPu</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    生产者（包子铺）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：生产包子<br>    对包子的状态进行判断<br>    true：有包子<br>        包子铺调用wait方法进入等待状态<br>    false：没有包子<br>        包子铺生产包子<br>        增加趣味：交替生产两种包子<br>            两种状态（i%2 == 0）<br>        包子铺生产好了包子<br>        修改包子的状态为true有<br>        唤醒吃货线程，让吃货线程吃包子<br>    注意：<br>        包子铺线程和包子线程关系–&gt;通信（互斥）<br>        必须使用同步技术保证两个线程只能有一个在执行<br>        锁对象必须保证唯一，可以使用包子对象作为锁对象<br>        包子铺类和吃货类就需要把包子对象作为参数传递进来<br>            1.需要在成员位置创建一个包子变量<br>            2.使用带参数构造方法，为这个包子变量赋值<br> */<br>public class BaoZiPu extends Thread {<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public BaoZiPu(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：生产包子@Overridepublic void run() {    // 定义一个变量    int count = 0;    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子的状态进行判断            if (baoZi.flag == true) {                // 包子铺调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            // 被唤醒之后执行，包子铺生产包子            // 增加趣味：交替生产两种包子 两种状态（i%2 == 0）            if (count % 2 == 0) {                baoZi.pi = &quot;薄皮&quot;;                baoZi.xian = &quot;三鲜馅&quot;;            } else {                baoZi.pi = &quot;厚皮&quot;;                baoZi.xian = &quot;牛肉大葱馅&quot;;            }            count++;            System.out.println(&quot;包子铺正在生产&quot; + baoZi.pi + baoZi.xian);            // 需要3秒做包子            try {                Thread.sleep(3000);            } catch (InterruptedException e) {                e.printStackTrace();            }            // 包子铺生产好了包子            // 修改包子的状态为true有            baoZi.flag = true;            // 唤醒吃货线程，让吃货线程吃包子            baoZi.notify();            System.out.println(&quot;包子铺已经生产完&quot; + baoZi.pi + baoZi.xian);        }    }}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;WaitAndNotify.Chihuo&lt;/p&gt;
+      &lt;p&gt;WaitAndNotify.BaoZiPu&lt;/p&gt;
     
     </summary>
     
@@ -132,17 +132,17 @@
   </entry>
   
   <entry>
-    <title>BaoZiPu</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/</id>
+    <title>Chihuo</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Chihuo/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Chihuo/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.871Z</updated>
+    <updated>2020-03-28T02:36:45.872Z</updated>
     
-    <content type="html"><![CDATA[<p>WaitAndNotify.BaoZiPu</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    生产者（包子铺）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：生产包子<br>    对包子的状态进行判断<br>    true：有包子<br>        包子铺调用wait方法进入等待状态<br>    false：没有包子<br>        包子铺生产包子<br>        增加趣味：交替生产两种包子<br>            两种状态（i%2 == 0）<br>        包子铺生产好了包子<br>        修改包子的状态为true有<br>        唤醒吃货线程，让吃货线程吃包子<br>    注意：<br>        包子铺线程和包子线程关系–&gt;通信（互斥）<br>        必须使用同步技术保证两个线程只能有一个在执行<br>        锁对象必须保证唯一，可以使用包子对象作为锁对象<br>        包子铺类和吃货类就需要把包子对象作为参数传递进来<br>            1.需要在成员位置创建一个包子变量<br>            2.使用带参数构造方法，为这个包子变量赋值<br> */<br>public class BaoZiPu extends Thread {<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public BaoZiPu(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：生产包子@Overridepublic void run() {    // 定义一个变量    int count = 0;    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子的状态进行判断            if (baoZi.flag == true) {                // 包子铺调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            // 被唤醒之后执行，包子铺生产包子            // 增加趣味：交替生产两种包子 两种状态（i%2 == 0）            if (count % 2 == 0) {                baoZi.pi = &quot;薄皮&quot;;                baoZi.xian = &quot;三鲜馅&quot;;            } else {                baoZi.pi = &quot;厚皮&quot;;                baoZi.xian = &quot;牛肉大葱馅&quot;;            }            count++;            System.out.println(&quot;包子铺正在生产&quot; + baoZi.pi + baoZi.xian);            // 需要3秒做包子            try {                Thread.sleep(3000);            } catch (InterruptedException e) {                e.printStackTrace();            }            // 包子铺生产好了包子            // 修改包子的状态为true有            baoZi.flag = true;            // 唤醒吃货线程，让吃货线程吃包子            baoZi.notify();            System.out.println(&quot;包子铺已经生产完&quot; + baoZi.pi + baoZi.xian);        }    }}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>WaitAndNotify.Chihuo</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    消费者（吃货）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：吃包子<br>    对包子状态进行判断<br>    false：没有包子<br>        吃货调用wait方法进入等待状态<br>    true：有包子<br>        吃货吃包子<br>        吃货吃完包子<br>        修改包子状态为false没有<br>        吃货唤醒包子铺生产包子<br> */<br>public class Chihuo extends Thread{<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public Chihuo(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：吃包子@Overridepublic void run() {    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子状态进行判断            if (baoZi.flag == false)  {                // 吃货调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            /*吃货吃包子                    吃货吃完包子            修改包子状态为false没有                    吃货唤醒包子铺生产包子*/            // 吃货吃包子            System.out.println(&quot;正在吃包子&quot; + baoZi.pi + baoZi.xian);            //  吃货吃完包子 修改包子状态为false没有            baoZi.flag = false;            // 吃货唤醒包子铺生产包子            baoZi.notify();            System.out.println(baoZi.pi + baoZi.xian + &quot;已吃完，包子铺开始生产包子&quot;);            System.out.println(&quot;==============================================&quot;);        }    }}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;WaitAndNotify.BaoZiPu&lt;/p&gt;
+      &lt;p&gt;WaitAndNotify.Chihuo&lt;/p&gt;
     
     </summary>
     
@@ -174,6 +174,29 @@
     
     
       <category term="WaitAndNotify" scheme="https://rzgongbowen.gitee.io/tags/WaitAndNotify/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Debug</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.790Z</updated>
+    
+    <content type="html"><![CDATA[<p>Debug.Demo01Debug</p><a id="more"></a><p>package com.Debug;</p><p>/*<br>    Debug调试程序：<br>        可以让代码逐行执行，查看代码执行的过程，调试程序中出现的bug<br>    使用方法：<br>        在行号的右边，鼠标左键单击，添加断点（每个方法的第一行，哪里有bug就添加到哪里）<br>        右键，选择Debug执行程序<br>        程序就会停留在添加的第一行断点处<br>    执行程序：<br>        F8：逐行执行程序<br>        F7：进入到方法中<br>        Shift+F8：跳出方法<br>        F9：跳到下一个断点，如果没有下一个断点，就结束程序<br>        Ctrl+F2：退出Debug模式，停止程序<br>        Console：切换到控制台<br> */<br>public class Demo01Debug {<br>    public static void main(String[] args) {<br>//        int a = 10;<br>//        int b = 20;<br>//        int sum = a + b;<br>//        System.out.println(sum);</p><pre><code>    for (int i = 0; i &lt; 3; i++) {        System.out.println(i);    }}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Debug.Demo01Debug&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Debug" scheme="https://rzgongbowen.gitee.io/tags/Debug/"/>
     
   </entry>
   
@@ -224,6 +247,29 @@
   </entry>
   
   <entry>
+    <title>Demo01Generic</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.801Z</updated>
+    
+    <content type="html"><![CDATA[<p>Generic.Demo01Generic</p><a id="more"></a><p>package com.Generic;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;</p><p>public class Demo01Generic {<br>    public static void main(String[] args) {<br>        ArrayList<String> list = new ArrayList&lt;&gt;();<br>        list.add(“aaa”);<br>        list.add(“bbb”);<br>        list.add(“ccc”);<br>        //使用迭代器遍历it集合<br>        Iterator<String> iterator = list.iterator();<br>        while (iterator.hasNext()) {<br>            String next = iterator.next();<br>            System.out.println(next);<br>        }</String></String></p><pre><code>    for (String s:list) {        System.out.println(s);    }}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Generic.Demo01Generic&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Generic" scheme="https://rzgongbowen.gitee.io/tags/Generic/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Demo01GetThreadName</title>
     <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01GetThreadName/"/>
     <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01GetThreadName/</id>
@@ -270,17 +316,17 @@
   </entry>
   
   <entry>
-    <title>Demo01Debug</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/</id>
+    <title>Demo01MainThread</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01MainThread/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01MainThread/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.790Z</updated>
+    <updated>2020-03-28T02:36:45.836Z</updated>
     
-    <content type="html"><![CDATA[<p>Debug.Demo01Debug</p><a id="more"></a><p>package com.Debug;</p><p>/*<br>    Debug调试程序：<br>        可以让代码逐行执行，查看代码执行的过程，调试程序中出现的bug<br>    使用方法：<br>        在行号的右边，鼠标左键单击，添加断点（每个方法的第一行，哪里有bug就添加到哪里）<br>        右键，选择Debug执行程序<br>        程序就会停留在添加的第一行断点处<br>    执行程序：<br>        F8：逐行执行程序<br>        F7：进入到方法中<br>        Shift+F8：跳出方法<br>        F9：跳到下一个断点，如果没有下一个断点，就结束程序<br>        Ctrl+F2：退出Debug模式，停止程序<br>        Console：切换到控制台<br> */<br>public class Demo01Debug {<br>    public static void main(String[] args) {<br>//        int a = 10;<br>//        int b = 20;<br>//        int sum = a + b;<br>//        System.out.println(sum);</p><pre><code>    for (int i = 0; i &lt; 3; i++) {        System.out.println(i);    }}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>Thread.Demo01MainThread</p><a id="more"></a><p>package com.Thread;</p><p>/*<br>    主线程：执行主（main）方法的线程</p><pre><code>单线程程序：java程序中只有一个线程执行从main方法开始。从上到下依次执行</code></pre><p> */<br>public class Demo01MainThread {<br>    public static void main(String[] args) {<br>        Person p1 = new Person(“小强”);<br>        p1.run();</p><pre><code>    Person p2 = new Person(&quot;旺财&quot;);    p2.run();}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Debug.Demo01Debug&lt;/p&gt;
+      &lt;p&gt;Thread.Demo01MainThread&lt;/p&gt;
     
     </summary>
     
@@ -288,30 +334,7 @@
       <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Debug" scheme="https://rzgongbowen.gitee.io/tags/Debug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01Generic</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.801Z</updated>
-    
-    <content type="html"><![CDATA[<p>Generic.Demo01Generic</p><a id="more"></a><p>package com.Generic;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;</p><p>public class Demo01Generic {<br>    public static void main(String[] args) {<br>        ArrayList<String> list = new ArrayList&lt;&gt;();<br>        list.add(“aaa”);<br>        list.add(“bbb”);<br>        list.add(“ccc”);<br>        //使用迭代器遍历it集合<br>        Iterator<String> iterator = list.iterator();<br>        while (iterator.hasNext()) {<br>            String next = iterator.next();<br>            System.out.println(next);<br>        }</String></String></p><pre><code>    for (String s:list) {        System.out.println(s);    }}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Generic.Demo01Generic&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Generic" scheme="https://rzgongbowen.gitee.io/tags/Generic/"/>
+      <category term="Thread" scheme="https://rzgongbowen.gitee.io/tags/Thread/"/>
     
   </entry>
   
@@ -335,29 +358,6 @@
     
     
       <category term="JDK9" scheme="https://rzgongbowen.gitee.io/tags/JDK9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01MainThread</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01MainThread/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01MainThread/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.836Z</updated>
-    
-    <content type="html"><![CDATA[<p>Thread.Demo01MainThread</p><a id="more"></a><p>package com.Thread;</p><p>/*<br>    主线程：执行主（main）方法的线程</p><pre><code>单线程程序：java程序中只有一个线程执行从main方法开始。从上到下依次执行</code></pre><p> */<br>public class Demo01MainThread {<br>    public static void main(String[] args) {<br>        Person p1 = new Person(“小强”);<br>        p1.run();</p><pre><code>    Person p2 = new Person(&quot;旺财&quot;);    p2.run();}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Thread.Demo01MainThread&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Thread" scheme="https://rzgongbowen.gitee.io/tags/Thread/"/>
     
   </entry>
   
@@ -431,29 +431,6 @@
   </entry>
   
   <entry>
-    <title>Demo01Runnable</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.863Z</updated>
-    
-    <content type="html"><![CDATA[<p>Lambda.Demo01Runnable</p><a id="more"></a><p>package com.ThreadAndLambda.Lambda;</p><p>/*<br>    使用实现Runnable接口的方式实现多线程程序<br> */<br>public class Demo01Runnable {<br>    public static void main(String[] args) {<br>        // 创建Runnable接口的实现类对象<br>        RunnableImpl runnable = new RunnableImpl();<br>        // 创建Thread类对象，构造方法中传递Runnable接口的实现类<br>        Thread thread = new Thread(runnable);<br>        // 调用start方法开启新线程，执行run方法<br>        thread.run();</p><pre><code>    // 简化代码，使用匿名内部类，实现多线程    Runnable runnable1 = new Runnable(){        @Override        public void run() {            System.out.println(Thread.currentThread().getName() + &quot;新线程创建了&quot;);        }    };    new Thread(runnable1).start();    // 简化代码    new Thread(new Runnable() {        @Override        public void run() {            System.out.println(Thread.currentThread().getName() + &quot;新线程创建了&quot;);        }    }).start();}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Lambda.Demo01Runnable&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Lambda" scheme="https://rzgongbowen.gitee.io/tags/Lambda/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Demo01Set</title>
     <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Set/"/>
     <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Set/</id>
@@ -473,6 +450,29 @@
     
     
       <category term="Set" scheme="https://rzgongbowen.gitee.io/tags/Set/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Runnable</title>
+    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/"/>
+    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.863Z</updated>
+    
+    <content type="html"><![CDATA[<p>Lambda.Demo01Runnable</p><a id="more"></a><p>package com.ThreadAndLambda.Lambda;</p><p>/*<br>    使用实现Runnable接口的方式实现多线程程序<br> */<br>public class Demo01Runnable {<br>    public static void main(String[] args) {<br>        // 创建Runnable接口的实现类对象<br>        RunnableImpl runnable = new RunnableImpl();<br>        // 创建Thread类对象，构造方法中传递Runnable接口的实现类<br>        Thread thread = new Thread(runnable);<br>        // 调用start方法开启新线程，执行run方法<br>        thread.run();</p><pre><code>    // 简化代码，使用匿名内部类，实现多线程    Runnable runnable1 = new Runnable(){        @Override        public void run() {            System.out.println(Thread.currentThread().getName() + &quot;新线程创建了&quot;);        }    };    new Thread(runnable1).start();    // 简化代码    new Thread(new Runnable() {        @Override        public void run() {            System.out.println(Thread.currentThread().getName() + &quot;新线程创建了&quot;);        }    }).start();}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Lambda.Demo01Runnable&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Lambda" scheme="https://rzgongbowen.gitee.io/tags/Lambda/"/>
     
   </entry>
   
