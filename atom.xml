@@ -5,9 +5,9 @@
   <subtitle>因为喜欢，可迎万难</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://rzgongbowen.gitee.io/"/>
+  <link href="http://yoursite.com/"/>
   <updated>2020-03-28T09:08:54.138Z</updated>
-  <id>https://rzgongbowen.gitee.io/</id>
+  <id>http://yoursite.com/</id>
   
   <author>
     <name>Gong Bowen</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>批量将目录下的文件复制到指定目录</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/103/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/103/</id>
+    <link href="http://yoursite.com/2020/03/28/103/"/>
+    <id>http://yoursite.com/2020/03/28/103/</id>
     <published>2020-03-28T08:49:00.000Z</published>
     <updated>2020-03-28T09:08:54.138Z</updated>
     
@@ -32,17 +32,17 @@
     </summary>
     
     
-      <category term="Python编写的小功能" scheme="https://rzgongbowen.gitee.io/categories/Python%E7%BC%96%E5%86%99%E7%9A%84%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
+      <category term="Python编写的小功能" scheme="http://yoursite.com/categories/Python%E7%BC%96%E5%86%99%E7%9A%84%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
     
     
-      <category term="批量" scheme="https://rzgongbowen.gitee.io/tags/%E6%89%B9%E9%87%8F/"/>
+      <category term="批量" scheme="http://yoursite.com/tags/%E6%89%B9%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>批量遍历目录下文件在文件头位置添加数据</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/102/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/102/</id>
+    <link href="http://yoursite.com/2020/03/28/102/"/>
+    <id>http://yoursite.com/2020/03/28/102/</id>
     <published>2020-03-28T08:41:00.000Z</published>
     <updated>2020-03-28T09:08:40.419Z</updated>
     
@@ -55,17 +55,17 @@
     </summary>
     
     
-      <category term="Python编写的小功能" scheme="https://rzgongbowen.gitee.io/categories/Python%E7%BC%96%E5%86%99%E7%9A%84%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
+      <category term="Python编写的小功能" scheme="http://yoursite.com/categories/Python%E7%BC%96%E5%86%99%E7%9A%84%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
     
     
-      <category term="批量" scheme="https://rzgongbowen.gitee.io/tags/%E6%89%B9%E9%87%8F/"/>
+      <category term="批量" scheme="http://yoursite.com/tags/%E6%89%B9%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>批量修改目录下文件的后缀</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/101/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/101/</id>
+    <link href="http://yoursite.com/2020/03/28/101/"/>
+    <id>http://yoursite.com/2020/03/28/101/</id>
     <published>2020-03-28T08:22:00.000Z</published>
     <updated>2020-03-28T09:08:24.223Z</updated>
     
@@ -78,17 +78,17 @@
     </summary>
     
     
-      <category term="Python编写的小功能" scheme="https://rzgongbowen.gitee.io/categories/Python%E7%BC%96%E5%86%99%E7%9A%84%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
+      <category term="Python编写的小功能" scheme="http://yoursite.com/categories/Python%E7%BC%96%E5%86%99%E7%9A%84%E5%B0%8F%E5%8A%9F%E8%83%BD/"/>
     
     
-      <category term="批量" scheme="https://rzgongbowen.gitee.io/tags/%E6%89%B9%E9%87%8F/"/>
+      <category term="批量" scheme="http://yoursite.com/tags/%E6%89%B9%E9%87%8F/"/>
     
   </entry>
   
   <entry>
     <title>BaoZi</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/BaoZi/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/BaoZi/</id>
+    <link href="http://yoursite.com/2020/03/28/BaoZi/"/>
+    <id>http://yoursite.com/2020/03/28/BaoZi/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.870Z</updated>
     
@@ -101,17 +101,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="WaitAndNotify" scheme="https://rzgongbowen.gitee.io/tags/WaitAndNotify/"/>
+      <category term="WaitAndNotify" scheme="http://yoursite.com/tags/WaitAndNotify/"/>
     
   </entry>
   
   <entry>
     <title>BaoZiPu</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/BaoZiPu/</id>
+    <link href="http://yoursite.com/2020/03/28/BaoZiPu/"/>
+    <id>http://yoursite.com/2020/03/28/BaoZiPu/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.871Z</updated>
     
@@ -124,17 +124,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="WaitAndNotify" scheme="https://rzgongbowen.gitee.io/tags/WaitAndNotify/"/>
+      <category term="WaitAndNotify" scheme="http://yoursite.com/tags/WaitAndNotify/"/>
     
   </entry>
   
   <entry>
     <title>Chihuo</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Chihuo/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Chihuo/</id>
+    <link href="http://yoursite.com/2020/03/28/Chihuo/"/>
+    <id>http://yoursite.com/2020/03/28/Chihuo/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.872Z</updated>
     
@@ -147,17 +147,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="WaitAndNotify" scheme="https://rzgongbowen.gitee.io/tags/WaitAndNotify/"/>
+      <category term="WaitAndNotify" scheme="http://yoursite.com/tags/WaitAndNotify/"/>
     
   </entry>
   
   <entry>
     <title>Demo</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo/"/>
+    <id>http://yoursite.com/2020/03/28/Demo/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.873Z</updated>
     
@@ -170,17 +170,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="WaitAndNotify" scheme="https://rzgongbowen.gitee.io/tags/WaitAndNotify/"/>
+      <category term="WaitAndNotify" scheme="http://yoursite.com/tags/WaitAndNotify/"/>
     
   </entry>
   
   <entry>
     <title>Demo01Debug</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Debug/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01Debug/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Debug/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.790Z</updated>
     
@@ -193,40 +193,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Debug" scheme="https://rzgongbowen.gitee.io/tags/Debug/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01Collections</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Collections/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Collections/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.780Z</updated>
-    
-    <content type="html"><![CDATA[<p>Collections.Demo01Collections</p><a id="more"></a><p>package com.Collections;</p><p>import java.util.ArrayList;<br>import java.util.Collections;</p><p>/*<br>    java.util.Collections是集合工具类，用来对集合进行操作。部分方法如下：<br>        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br> */<br>public class Demo01Collections {<br>    public static void main(String[] args) {<br>        ArrayList<String> arrayList = new ArrayList&lt;&gt;();<br>//        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        Collections.addAll(arrayList,”a”,”b”,”c”,”d”);</T></T></String></T></T></p><pre><code>System.out.println(arrayList); // [a, b, c, d]</code></pre><p>//        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br>        Collections.shuffle(arrayList);<br>        System.out.println(arrayList); // [c, b, a, d]</p><pre><code>}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Collections.Demo01Collections&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Collections" scheme="https://rzgongbowen.gitee.io/tags/Collections/"/>
+      <category term="Debug" scheme="http://yoursite.com/tags/Debug/"/>
     
   </entry>
   
   <entry>
     <title>Demo01Exception</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Exception/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Exception/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01Exception/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Exception/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.792Z</updated>
     
@@ -239,17 +216,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Exception" scheme="https://rzgongbowen.gitee.io/tags/Exception/"/>
+      <category term="Exception" scheme="http://yoursite.com/tags/Exception/"/>
     
   </entry>
   
   <entry>
     <title>Demo01Generic</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Generic/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01Generic/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Generic/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.801Z</updated>
     
@@ -262,17 +239,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Generic" scheme="https://rzgongbowen.gitee.io/tags/Generic/"/>
+      <category term="Generic" scheme="http://yoursite.com/tags/Generic/"/>
     
   </entry>
   
   <entry>
     <title>Demo01GetThreadName</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01GetThreadName/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01GetThreadName/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01GetThreadName/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01GetThreadName/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.840Z</updated>
     
@@ -285,17 +262,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="GetName" scheme="https://rzgongbowen.gitee.io/tags/GetName/"/>
+      <category term="GetName" scheme="http://yoursite.com/tags/GetName/"/>
     
   </entry>
   
   <entry>
     <title>Demo01InnerClassThread</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01InnerClassThread/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01InnerClassThread/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01InnerClassThread/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01InnerClassThread/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.844Z</updated>
     
@@ -308,40 +285,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="InnerClassThread" scheme="https://rzgongbowen.gitee.io/tags/InnerClassThread/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01MainThread</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01MainThread/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01MainThread/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.836Z</updated>
-    
-    <content type="html"><![CDATA[<p>Thread.Demo01MainThread</p><a id="more"></a><p>package com.Thread;</p><p>/*<br>    主线程：执行主（main）方法的线程</p><pre><code>单线程程序：java程序中只有一个线程执行从main方法开始。从上到下依次执行</code></pre><p> */<br>public class Demo01MainThread {<br>    public static void main(String[] args) {<br>        Person p1 = new Person(“小强”);<br>        p1.run();</p><pre><code>    Person p2 = new Person(&quot;旺财&quot;);    p2.run();}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Thread.Demo01MainThread&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Thread" scheme="https://rzgongbowen.gitee.io/tags/Thread/"/>
+      <category term="InnerClassThread" scheme="http://yoursite.com/tags/InnerClassThread/"/>
     
   </entry>
   
   <entry>
     <title>Demo01JDK9</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01JDK9/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01JDK9/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01JDK9/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01JDK9/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.813Z</updated>
     
@@ -354,17 +308,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="JDK9" scheme="https://rzgongbowen.gitee.io/tags/JDK9/"/>
+      <category term="JDK9" scheme="http://yoursite.com/tags/JDK9/"/>
     
   </entry>
   
   <entry>
     <title>Demo01List</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01List/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01List/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01List/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01List/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.815Z</updated>
     
@@ -377,17 +331,40 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="List" scheme="https://rzgongbowen.gitee.io/tags/List/"/>
+      <category term="List" scheme="http://yoursite.com/tags/List/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01MainThread</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01MainThread/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01MainThread/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.836Z</updated>
+    
+    <content type="html"><![CDATA[<p>Thread.Demo01MainThread</p><a id="more"></a><p>package com.Thread;</p><p>/*<br>    主线程：执行主（main）方法的线程</p><pre><code>单线程程序：java程序中只有一个线程执行从main方法开始。从上到下依次执行</code></pre><p> */<br>public class Demo01MainThread {<br>    public static void main(String[] args) {<br>        Person p1 = new Person(“小强”);<br>        p1.run();</p><pre><code>    Person p2 = new Person(&quot;旺财&quot;);    p2.run();}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Thread.Demo01MainThread&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Thread" scheme="http://yoursite.com/tags/Thread/"/>
     
   </entry>
   
   <entry>
     <title>Demo01Map</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Map/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Map/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01Map/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Map/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.817Z</updated>
     
@@ -400,17 +377,17 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Map" scheme="https://rzgongbowen.gitee.io/tags/Map/"/>
+      <category term="Map" scheme="http://yoursite.com/tags/Map/"/>
     
   </entry>
   
   <entry>
     <title>Demo01RegisterException</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01RegisterException/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01RegisterException/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01RegisterException/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01RegisterException/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.828Z</updated>
     
@@ -423,40 +400,40 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="MyException" scheme="https://rzgongbowen.gitee.io/tags/MyException/"/>
+      <category term="MyException" scheme="http://yoursite.com/tags/MyException/"/>
     
   </entry>
   
   <entry>
-    <title>Demo01Set</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Set/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Set/</id>
+    <title>Demo01Collections</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Collections/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Collections/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.832Z</updated>
+    <updated>2020-03-28T02:36:45.780Z</updated>
     
-    <content type="html"><![CDATA[<p>Set.Demo01Set</p><a id="more"></a><p>package com.Set;</p><p>import java.util.HashSet;<br>import java.util.Iterator;<br>import java.util.Set;</p><p>/*<br>    java.util.Set接口 extends Collections接口<br>    Set接口的特点：<br>        1.不允许存储重复的元素<br>        2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历<br>    java.util.HashSet集合 implements Set接口<br>    HashSet特点：<br>        1.不允许存储重复元素<br>        2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历<br>        3.是一个无序的集合，存储元素和取出元素的顺序有可能不一致<br>        4.底层是一个哈希表结构（查询速度非常快）<br> */<br>public class Demo01Set {<br>    public static void main(String[] args) {<br>        Set<Integer> set = new HashSet&lt;&gt;();<br>        // 使用add方法往集合添加数据<br>        set.add(1);<br>        set.add(4);<br>        set.add(3);<br>        set.add(1);<br>        // 使用迭代器遍历set集合<br>        Iterator<Integer> iterator = set.iterator();<br>        while (iterator.hasNext()) {<br>            Integer next = iterator.next();<br>            System.out.println(next); // 1,3,4   不允许存储重复元素，无序<br>        }<br>        // 使用增强for遍历set集合<br>        System.out.println(“======================”);<br>        for (Integer i : set) {<br>            System.out.println(i); // 1,3,4    不允许存储重复元素，无序<br>        }</Integer></Integer></p><pre><code>}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>Collections.Demo01Collections</p><a id="more"></a><p>package com.Collections;</p><p>import java.util.ArrayList;<br>import java.util.Collections;</p><p>/*<br>    java.util.Collections是集合工具类，用来对集合进行操作。部分方法如下：<br>        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br> */<br>public class Demo01Collections {<br>    public static void main(String[] args) {<br>        ArrayList<String> arrayList = new ArrayList&lt;&gt;();<br>//        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        Collections.addAll(arrayList,”a”,”b”,”c”,”d”);</T></T></String></T></T></p><pre><code>System.out.println(arrayList); // [a, b, c, d]</code></pre><p>//        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br>        Collections.shuffle(arrayList);<br>        System.out.println(arrayList); // [c, b, a, d]</p><pre><code>}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Set.Demo01Set&lt;/p&gt;
+      &lt;p&gt;Collections.Demo01Collections&lt;/p&gt;
     
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Set" scheme="https://rzgongbowen.gitee.io/tags/Set/"/>
+      <category term="Collections" scheme="http://yoursite.com/tags/Collections/"/>
     
   </entry>
   
   <entry>
     <title>Demo01Runnable</title>
-    <link href="https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/"/>
-    <id>https://rzgongbowen.gitee.io/2020/03/28/Demo01Runnable/</id>
+    <link href="http://yoursite.com/2020/03/28/Demo01Runnable/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Runnable/</id>
     <published>2020-03-28T02:35:40.000Z</published>
     <updated>2020-03-28T02:36:45.863Z</updated>
     
@@ -469,10 +446,33 @@
     </summary>
     
     
-      <category term="初学JAVA" scheme="https://rzgongbowen.gitee.io/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Lambda" scheme="https://rzgongbowen.gitee.io/tags/Lambda/"/>
+      <category term="Lambda" scheme="http://yoursite.com/tags/Lambda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Set</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Set/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Set/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>Set.Demo01Set</p><a id="more"></a><p>package com.Set;</p><p>import java.util.HashSet;<br>import java.util.Iterator;<br>import java.util.Set;</p><p>/*<br>    java.util.Set接口 extends Collections接口<br>    Set接口的特点：<br>        1.不允许存储重复的元素<br>        2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历<br>    java.util.HashSet集合 implements Set接口<br>    HashSet特点：<br>        1.不允许存储重复元素<br>        2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历<br>        3.是一个无序的集合，存储元素和取出元素的顺序有可能不一致<br>        4.底层是一个哈希表结构（查询速度非常快）<br> */<br>public class Demo01Set {<br>    public static void main(String[] args) {<br>        Set<Integer> set = new HashSet&lt;&gt;();<br>        // 使用add方法往集合添加数据<br>        set.add(1);<br>        set.add(4);<br>        set.add(3);<br>        set.add(1);<br>        // 使用迭代器遍历set集合<br>        Iterator<Integer> iterator = set.iterator();<br>        while (iterator.hasNext()) {<br>            Integer next = iterator.next();<br>            System.out.println(next); // 1,3,4   不允许存储重复元素，无序<br>        }<br>        // 使用增强for遍历set集合<br>        System.out.println(“======================”);<br>        for (Integer i : set) {<br>            System.out.println(i); // 1,3,4    不允许存储重复元素，无序<br>        }</Integer></Integer></p><pre><code>}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Set.Demo01Set&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Set" scheme="http://yoursite.com/tags/Set/"/>
     
   </entry>
   
