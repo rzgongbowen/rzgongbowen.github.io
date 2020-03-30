@@ -86,17 +86,17 @@
   </entry>
   
   <entry>
-    <title>BaoZi</title>
-    <link href="http://yoursite.com/2020/03/28/BaoZi/"/>
-    <id>http://yoursite.com/2020/03/28/BaoZi/</id>
+    <title>Demo</title>
+    <link href="http://yoursite.com/2020/03/28/Demo/"/>
+    <id>http://yoursite.com/2020/03/28/Demo/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.870Z</updated>
+    <updated>2020-03-28T02:36:45.873Z</updated>
     
-    <content type="html"><![CDATA[<p>WaitAndNotify.BaoZi</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    资源类：包子类<br>    设置包子的属性<br>        皮<br>        馅<br>        包子的状态：有 true，没有 false<br> */<br>public class BaoZi {<br>    // 皮<br>    String pi;<br>    // 馅<br>    String xian;<br>    // 包子的状态：有 true，没有 false，设置初始值为false没有包子<br>    boolean flag = false;</p><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>WaitAndNotify.Demo</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    测试类：<br>    包含main方法，程序执行的入口，启动程序<br>    创建包子对象<br>    创建包子铺进程，开启，生产包子<br>    创建吃货进程，开启，吃包子<br> */<br>public class Demo {<br>    public static void main(String[] args) {<br>        // 创建包子对象<br>        BaoZi baoZi = new BaoZi();<br>        // 创建包子铺进程，开启，生产包子<br>        new BaoZiPu(baoZi).start();<br>        // 创建吃货进程，开启，吃包子<br>        new Chihuo(baoZi).start();<br>    }<br>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;WaitAndNotify.BaoZi&lt;/p&gt;
+      &lt;p&gt;WaitAndNotify.Demo&lt;/p&gt;
     
     </summary>
     
@@ -132,6 +132,29 @@
   </entry>
   
   <entry>
+    <title>BaoZi</title>
+    <link href="http://yoursite.com/2020/03/28/BaoZi/"/>
+    <id>http://yoursite.com/2020/03/28/BaoZi/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.870Z</updated>
+    
+    <content type="html"><![CDATA[<p>WaitAndNotify.BaoZi</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    资源类：包子类<br>    设置包子的属性<br>        皮<br>        馅<br>        包子的状态：有 true，没有 false<br> */<br>public class BaoZi {<br>    // 皮<br>    String pi;<br>    // 馅<br>    String xian;<br>    // 包子的状态：有 true，没有 false，设置初始值为false没有包子<br>    boolean flag = false;</p><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;WaitAndNotify.BaoZi&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="WaitAndNotify" scheme="http://yoursite.com/tags/WaitAndNotify/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Chihuo</title>
     <link href="http://yoursite.com/2020/03/28/Chihuo/"/>
     <id>http://yoursite.com/2020/03/28/Chihuo/</id>
@@ -155,17 +178,17 @@
   </entry>
   
   <entry>
-    <title>Demo</title>
-    <link href="http://yoursite.com/2020/03/28/Demo/"/>
-    <id>http://yoursite.com/2020/03/28/Demo/</id>
+    <title>Demo01Collections</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Collections/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Collections/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.873Z</updated>
+    <updated>2020-03-28T02:36:45.780Z</updated>
     
-    <content type="html"><![CDATA[<p>WaitAndNotify.Demo</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    测试类：<br>    包含main方法，程序执行的入口，启动程序<br>    创建包子对象<br>    创建包子铺进程，开启，生产包子<br>    创建吃货进程，开启，吃包子<br> */<br>public class Demo {<br>    public static void main(String[] args) {<br>        // 创建包子对象<br>        BaoZi baoZi = new BaoZi();<br>        // 创建包子铺进程，开启，生产包子<br>        new BaoZiPu(baoZi).start();<br>        // 创建吃货进程，开启，吃包子<br>        new Chihuo(baoZi).start();<br>    }<br>}</p>]]></content>
+    <content type="html"><![CDATA[<p>Collections.Demo01Collections</p><a id="more"></a><p>package com.Collections;</p><p>import java.util.ArrayList;<br>import java.util.Collections;</p><p>/*<br>    java.util.Collections是集合工具类，用来对集合进行操作。部分方法如下：<br>        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br> */<br>public class Demo01Collections {<br>    public static void main(String[] args) {<br>        ArrayList<String> arrayList = new ArrayList&lt;&gt;();<br>//        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        Collections.addAll(arrayList,”a”,”b”,”c”,”d”);</T></T></String></T></T></p><pre><code>System.out.println(arrayList); // [a, b, c, d]</code></pre><p>//        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br>        Collections.shuffle(arrayList);<br>        System.out.println(arrayList); // [c, b, a, d]</p><pre><code>}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;WaitAndNotify.Demo&lt;/p&gt;
+      &lt;p&gt;Collections.Demo01Collections&lt;/p&gt;
     
     </summary>
     
@@ -173,7 +196,30 @@
       <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="WaitAndNotify" scheme="http://yoursite.com/tags/WaitAndNotify/"/>
+      <category term="Collections" scheme="http://yoursite.com/tags/Collections/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Generic</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Generic/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Generic/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.801Z</updated>
+    
+    <content type="html"><![CDATA[<p>Generic.Demo01Generic</p><a id="more"></a><p>package com.Generic;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;</p><p>public class Demo01Generic {<br>    public static void main(String[] args) {<br>        ArrayList<String> list = new ArrayList&lt;&gt;();<br>        list.add(“aaa”);<br>        list.add(“bbb”);<br>        list.add(“ccc”);<br>        //使用迭代器遍历it集合<br>        Iterator<String> iterator = list.iterator();<br>        while (iterator.hasNext()) {<br>            String next = iterator.next();<br>            System.out.println(next);<br>        }</String></String></p><pre><code>    for (String s:list) {        System.out.println(s);    }}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Generic.Demo01Generic&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Generic" scheme="http://yoursite.com/tags/Generic/"/>
     
   </entry>
   
@@ -224,29 +270,6 @@
   </entry>
   
   <entry>
-    <title>Demo01Generic</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01Generic/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01Generic/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.801Z</updated>
-    
-    <content type="html"><![CDATA[<p>Generic.Demo01Generic</p><a id="more"></a><p>package com.Generic;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;</p><p>public class Demo01Generic {<br>    public static void main(String[] args) {<br>        ArrayList<String> list = new ArrayList&lt;&gt;();<br>        list.add(“aaa”);<br>        list.add(“bbb”);<br>        list.add(“ccc”);<br>        //使用迭代器遍历it集合<br>        Iterator<String> iterator = list.iterator();<br>        while (iterator.hasNext()) {<br>            String next = iterator.next();<br>            System.out.println(next);<br>        }</String></String></p><pre><code>    for (String s:list) {        System.out.println(s);    }}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Generic.Demo01Generic&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Generic" scheme="http://yoursite.com/tags/Generic/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Demo01GetThreadName</title>
     <link href="http://yoursite.com/2020/03/28/Demo01GetThreadName/"/>
     <id>http://yoursite.com/2020/03/28/Demo01GetThreadName/</id>
@@ -266,6 +289,52 @@
     
     
       <category term="GetName" scheme="http://yoursite.com/tags/GetName/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01MainThread</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01MainThread/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01MainThread/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.836Z</updated>
+    
+    <content type="html"><![CDATA[<p>Thread.Demo01MainThread</p><a id="more"></a><p>package com.Thread;</p><p>/*<br>    主线程：执行主（main）方法的线程</p><pre><code>单线程程序：java程序中只有一个线程执行从main方法开始。从上到下依次执行</code></pre><p> */<br>public class Demo01MainThread {<br>    public static void main(String[] args) {<br>        Person p1 = new Person(“小强”);<br>        p1.run();</p><pre><code>    Person p2 = new Person(&quot;旺财&quot;);    p2.run();}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Thread.Demo01MainThread&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Thread" scheme="http://yoursite.com/tags/Thread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01List</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01List/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01List/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.815Z</updated>
+    
+    <content type="html"><![CDATA[<p>List.Demo01List</p><a id="more"></a><p>package com.List;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;<br>import java.util.List;</p><p>/*<br>    java.util.List接口 extends Collection接口<br>    List接口的特点：<br>        1.有序的集合，存储元素和取出元素的顺序是一致的（存储123 取出123）<br>        2.有索引，包含了一些带索引的方法<br>        3.允许存储重复的元素</p><pre><code>List接口中带索引的方法（特有）：    public void add(int index, E element): 将指定的元素，添加到该集合中的指定位置上    public E get(int index): 返回集合中指定位置的元素    public E remove(int index): 移除列表中指定位置的元素，返回的是被移除的元素    public E set(int index, E element): 用指定元素替换集合中指定位置的元素，返回值是更新前的元素注意：    操作索引的时候，一定要防止索引越界    IndexOutOfBoundsException： 集合索引越界异常    ArrayIndexOutOfBoundsException： 数组索引越界异常    StringIndexOutOfBoundsException： 字符串索引越界异常</code></pre><p> */<br>public class Demo01List {<br>    public static void main(String[] args) {<br>        // 创建List集合对象，多态<br>        List<String> list = new ArrayList&lt;&gt;();<br>        // 使用add方法往集合中添加元素<br>        list.add(“a”);<br>        list.add(“b”);<br>        list.add(“c”);<br>        list.add(“d”);<br>        list.add(“a”);<br>        // 打印集合<br>        System.out.println(list); // [a, b, c, d, a]  不是地址值，则重写了toString</String></p><pre><code>    // public void add(int index, E element): 将指定的元素，添加到该集合中的指定位置上    // 在b和c之间添加abc    list.add(2,&quot;abc&quot;);    System.out.println(list);    // public E remove(int index): 移除列表中指定位置的元素，返回的是被移除的元素    String remove = list.remove(1);    System.out.println(list);    System.out.println(&quot;被移除的元素：&quot; + remove);    // public E set(int index, E element): 用指定元素替换集合中指定位置的元素，返回值是更新前的元素    // 将abc替换为ABC    String abc = list.set(1, &quot;ABC&quot;);    System.out.println(list);    System.out.println(&quot;被替换的元素：&quot; + abc);    // List集合遍历有3种方式    // 使用普通的for循环    for (int i = 0; i &lt; list.size(); i++) {        // public E get(int index): 返回集合中指定位置的元素        String s = list.get(i);        System.out.println(s);    }    // 使用迭代器    Iterator&lt;String&gt; iterator = list.iterator();    while (iterator.hasNext()) {        String next = iterator.next();        System.out.println(next);    }    // 增强for循环    for (String s : list) {        System.out.println(s);    }    String s = list.get(10);    System.out.println(s); // IndexOutOfBoundsException 越界异常}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;List.Demo01List&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="List" scheme="http://yoursite.com/tags/List/"/>
     
   </entry>
   
@@ -316,17 +385,17 @@
   </entry>
   
   <entry>
-    <title>Demo01List</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01List/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01List/</id>
+    <title>Demo01SetThreadName</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01SetThreadName/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01SetThreadName/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.815Z</updated>
+    <updated>2020-03-28T02:36:45.852Z</updated>
     
-    <content type="html"><![CDATA[<p>List.Demo01List</p><a id="more"></a><p>package com.List;</p><p>import java.util.ArrayList;<br>import java.util.Iterator;<br>import java.util.List;</p><p>/*<br>    java.util.List接口 extends Collection接口<br>    List接口的特点：<br>        1.有序的集合，存储元素和取出元素的顺序是一致的（存储123 取出123）<br>        2.有索引，包含了一些带索引的方法<br>        3.允许存储重复的元素</p><pre><code>List接口中带索引的方法（特有）：    public void add(int index, E element): 将指定的元素，添加到该集合中的指定位置上    public E get(int index): 返回集合中指定位置的元素    public E remove(int index): 移除列表中指定位置的元素，返回的是被移除的元素    public E set(int index, E element): 用指定元素替换集合中指定位置的元素，返回值是更新前的元素注意：    操作索引的时候，一定要防止索引越界    IndexOutOfBoundsException： 集合索引越界异常    ArrayIndexOutOfBoundsException： 数组索引越界异常    StringIndexOutOfBoundsException： 字符串索引越界异常</code></pre><p> */<br>public class Demo01List {<br>    public static void main(String[] args) {<br>        // 创建List集合对象，多态<br>        List<String> list = new ArrayList&lt;&gt;();<br>        // 使用add方法往集合中添加元素<br>        list.add(“a”);<br>        list.add(“b”);<br>        list.add(“c”);<br>        list.add(“d”);<br>        list.add(“a”);<br>        // 打印集合<br>        System.out.println(list); // [a, b, c, d, a]  不是地址值，则重写了toString</String></p><pre><code>    // public void add(int index, E element): 将指定的元素，添加到该集合中的指定位置上    // 在b和c之间添加abc    list.add(2,&quot;abc&quot;);    System.out.println(list);    // public E remove(int index): 移除列表中指定位置的元素，返回的是被移除的元素    String remove = list.remove(1);    System.out.println(list);    System.out.println(&quot;被移除的元素：&quot; + remove);    // public E set(int index, E element): 用指定元素替换集合中指定位置的元素，返回值是更新前的元素    // 将abc替换为ABC    String abc = list.set(1, &quot;ABC&quot;);    System.out.println(list);    System.out.println(&quot;被替换的元素：&quot; + abc);    // List集合遍历有3种方式    // 使用普通的for循环    for (int i = 0; i &lt; list.size(); i++) {        // public E get(int index): 返回集合中指定位置的元素        String s = list.get(i);        System.out.println(s);    }    // 使用迭代器    Iterator&lt;String&gt; iterator = list.iterator();    while (iterator.hasNext()) {        String next = iterator.next();        System.out.println(next);    }    // 增强for循环    for (String s : list) {        System.out.println(s);    }    String s = list.get(10);    System.out.println(s); // IndexOutOfBoundsException 越界异常}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>SetName.Demo01SetThreadName</p><a id="more"></a><p>package com.Thread.SetName;</p><p>public class Demo01SetThreadName {<br>    public static void main(String[] args) {<br>        // 开启多线程<br>        MyThread myThread = new MyThread();<br>        myThread.setName(“111”);<br>        myThread.start();</p><pre><code>    // 开启多线程    new MyThread(&quot;222&quot;).start();}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;List.Demo01List&lt;/p&gt;
+      &lt;p&gt;SetName.Demo01SetThreadName&lt;/p&gt;
     
     </summary>
     
@@ -334,99 +403,7 @@
       <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="List" scheme="http://yoursite.com/tags/List/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01MainThread</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01MainThread/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01MainThread/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.836Z</updated>
-    
-    <content type="html"><![CDATA[<p>Thread.Demo01MainThread</p><a id="more"></a><p>package com.Thread;</p><p>/*<br>    主线程：执行主（main）方法的线程</p><pre><code>单线程程序：java程序中只有一个线程执行从main方法开始。从上到下依次执行</code></pre><p> */<br>public class Demo01MainThread {<br>    public static void main(String[] args) {<br>        Person p1 = new Person(“小强”);<br>        p1.run();</p><pre><code>    Person p2 = new Person(&quot;旺财&quot;);    p2.run();}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Thread.Demo01MainThread&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Thread" scheme="http://yoursite.com/tags/Thread/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01Map</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01Map/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01Map/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.817Z</updated>
-    
-    <content type="html"><![CDATA[<p>Map.Demo01Map</p><a id="more"></a><p>package com.Map;</p><p>import java.util.HashMap;<br>import java.util.Map;</p><p>/*<br>    java.util.Map&lt;k,v&gt; 集合<br>    Map集合的特点：<br>        1.Map集合是一个双列集合，一个元素包含两个值(一个key,一个value)<br>        2.Map集合中的元素，key和value的数据类型可以相同，也可以不同<br>        3.Map集合中的元素，key是不允许重复的，value可以重复<br>        4.Map集合中的元素，key和value是一一对应的<br>    java.util.HashMap&lt;k,v&gt;集合 implements Map&lt;k,v&gt;接口<br>    HashMap集合的特点：<br>        1.HashMap集合底层是哈希表：查询的速度特别快<br>        2.HashMap集合是一个无序的集合，存储元素与取出的元素有可能不一致<br>    java.util.LinkedHashMap&lt;k,v&gt;集合 extends HashMap(k,v) 集合<br>    LinkedHAshMap的特点：<br>        1.LinkedHashMap集合底层是哈希表+链表（保证迭代的顺序）<br>        2.LinkedHashMap集合是一个有序的集合。存储元素和取出元素的顺序一致<br> */<br>public class Demo01Map {<br>    public static void main(String[] args) {<br>        show01();<br>        System.out.println(“=======================”);<br>        show02();<br>        System.out.println(“=======================”);<br>        show03();<br>        System.out.println(“=======================”);<br>        show04();<br>    }</p><pre><code>/*    boolean containsKey(Object key) 判断集合中是否包含指定的键    包含返回true，不包含返回false */private static void show04() {    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();    map.put(&quot;第一&quot;,1);    map.put(&quot;第二&quot;,2);    map.put(&quot;第三&quot;,3);    map.put(&quot;第四&quot;,4);    boolean get1 = map.containsKey(&quot;第一&quot;);    System.out.println(get1); // true    boolean get2 = map.containsKey(&quot;第五&quot;);    System.out.println(get2); // false}/*    public V get(Object key) 根据指定的键，在Map集合中获取对应的值    返回值：        key存在，返回对应的value值        key不存在，返回null */private static void show03() {    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();    map.put(&quot;第一&quot;,1);    map.put(&quot;第二&quot;,2);    map.put(&quot;第三&quot;,3);    map.put(&quot;第四&quot;,4);    Integer get1 = map.get(&quot;第一&quot;);    System.out.println(get1); // 1    Integer get2 = map.get(&quot;第五&quot;);    System.out.println(get2); // null}/*    public V remove(Object key)：把指定的键所对应的键值对元素 在Map集合中删除。返回被删除元素的值 */private static void show02() {    // 创建Map集合对象，多态    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();    String v1 = map.put(&quot;小米&quot;, &quot;小花&quot;);    System.out.println(v1); // null    String v2 = map.put(&quot;小米&quot;, &quot;小花花&quot;);    System.out.println(v2); // 小花    System.out.println(map); // {小米=小花花}    map.put(&quot;1&quot;, &quot;2&quot;);    map.put(&quot;3&quot;, &quot;2&quot;);    map.put(&quot;4&quot;, &quot;4&quot;);    System.out.println(map);    String remove = map.remove(&quot;1&quot;);    System.out.println(remove);    System.out.println(map);}/*    public v put(K key, V value)：把指定的键与指定的值添加到Map集合中去        返回值: v            存储键值对时，key不重复，返回值v是null            存储键值对时，key重复，会使用新的value替换map中重复的value，返回被替换的value值 */private static void show01() {    // 创建Map集合对象，多态    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();    String v1 = map.put(&quot;小米&quot;, &quot;小花&quot;);    System.out.println(v1); // null    String v2 = map.put(&quot;小米&quot;, &quot;小花花&quot;);    System.out.println(v2); // 小花    System.out.println(map); // {小米=小花花}    map.put(&quot;1&quot;, &quot;2&quot;);    map.put(&quot;3&quot;, &quot;2&quot;);    map.put(&quot;4&quot;, &quot;4&quot;);    System.out.println(map);}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Map.Demo01Map&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Map" scheme="http://yoursite.com/tags/Map/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01RegisterException</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01RegisterException/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01RegisterException/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.828Z</updated>
-    
-    <content type="html"><![CDATA[<p>MyException.Demo01RegisterException</p><a id="more"></a><p>package com.MyException;</p><p>import java.util.Scanner;</p><p>/*<br>    要求：我们模拟注册操作，如果用户名已存在，则抛出异常并提示：亲，该用户名已经被注册。<br>    分析：<br>        1.使用数组保存已经注册过的用户名（数据库）<br>        2.使用Scanner获取用户输入的注册的用户名（前端，页面）<br>        3.定义一个方法，对输入的注册的用户名进行判断<br>            遍历存储已经注册过用户名的数组，获取每一个用户名<br>            使用获取到的用户名和用户输入的用户名比较<br>                true:<br>                    用户名已经存在，抛出RegisterException异常，告知用户“亲，该用户名已经被注册。”<br>                false:<br>                    继续遍历比较<br>                    如果循环结束了，还没有找到重复的用户名，提示用户“恭喜您，注册成功！”<br> */<br>public class Demo01RegisterException {<br>    // 1.使用数组保存已经注册过的用户名（数据库）<br>    static String[] usernames = {“张三”, “李四”, “王五”};</p><pre><code>public static void main(String[] args) /*throws RegisterException*/ {    // 2.使用Scanner获取用户输入的注册的用户名（前端，页面）    Scanner scanner = new Scanner(System.in);    System.out.println(&quot;请输入您要注册的用户名：&quot;);    String username = scanner.next();    checkUsernames(username);}// 3.定义一个方法，对输入的注册的用户名进行判断public static void checkUsernames(String username) /*throws RegisterException*/ {    // 遍历存储已经注册过用户名的数组，获取每一个用户名    for (String name : usernames) {        // 使用获取到的用户名和用户输入的用户名比较        if (name.equals(username)) {            // true：用户名已经存在，抛出RegisterException异常，告知用户“亲，该用户名已经被注册。”            try {                throw new RegisterException(&quot;亲，该用户名已经被注册。&quot;);            } catch (RegisterException e) {                e.printStackTrace();                return; // 结束方法            }        }    }    // 如果循环结束了，还没有找到重复的用户名，提示用户“恭喜您，注册成功！”    System.out.println(&quot;恭喜您，注册成功！&quot;);}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;MyException.Demo01RegisterException&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="MyException" scheme="http://yoursite.com/tags/MyException/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01Collections</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01Collections/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01Collections/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.780Z</updated>
-    
-    <content type="html"><![CDATA[<p>Collections.Demo01Collections</p><a id="more"></a><p>package com.Collections;</p><p>import java.util.ArrayList;<br>import java.util.Collections;</p><p>/*<br>    java.util.Collections是集合工具类，用来对集合进行操作。部分方法如下：<br>        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br> */<br>public class Demo01Collections {<br>    public static void main(String[] args) {<br>        ArrayList<String> arrayList = new ArrayList&lt;&gt;();<br>//        public static <T> boolean addAll(Collection<T> c,t…element): 往集合中添加一些元素<br>        Collections.addAll(arrayList,”a”,”b”,”c”,”d”);</T></T></String></T></T></p><pre><code>System.out.println(arrayList); // [a, b, c, d]</code></pre><p>//        public static void shuffle(List&lt;?&gt; list): 打乱顺序。打乱集合顺序<br>        Collections.shuffle(arrayList);<br>        System.out.println(arrayList); // [c, b, a, d]</p><pre><code>}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Collections.Demo01Collections&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Collections" scheme="http://yoursite.com/tags/Collections/"/>
+      <category term="SetName" scheme="http://yoursite.com/tags/SetName/"/>
     
   </entry>
   
@@ -454,17 +431,17 @@
   </entry>
   
   <entry>
-    <title>Demo01Set</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01Set/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01Set/</id>
+    <title>Demo01RegisterException</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01RegisterException/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01RegisterException/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.832Z</updated>
+    <updated>2020-03-28T02:36:45.828Z</updated>
     
-    <content type="html"><![CDATA[<p>Set.Demo01Set</p><a id="more"></a><p>package com.Set;</p><p>import java.util.HashSet;<br>import java.util.Iterator;<br>import java.util.Set;</p><p>/*<br>    java.util.Set接口 extends Collections接口<br>    Set接口的特点：<br>        1.不允许存储重复的元素<br>        2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历<br>    java.util.HashSet集合 implements Set接口<br>    HashSet特点：<br>        1.不允许存储重复元素<br>        2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历<br>        3.是一个无序的集合，存储元素和取出元素的顺序有可能不一致<br>        4.底层是一个哈希表结构（查询速度非常快）<br> */<br>public class Demo01Set {<br>    public static void main(String[] args) {<br>        Set<Integer> set = new HashSet&lt;&gt;();<br>        // 使用add方法往集合添加数据<br>        set.add(1);<br>        set.add(4);<br>        set.add(3);<br>        set.add(1);<br>        // 使用迭代器遍历set集合<br>        Iterator<Integer> iterator = set.iterator();<br>        while (iterator.hasNext()) {<br>            Integer next = iterator.next();<br>            System.out.println(next); // 1,3,4   不允许存储重复元素，无序<br>        }<br>        // 使用增强for遍历set集合<br>        System.out.println(“======================”);<br>        for (Integer i : set) {<br>            System.out.println(i); // 1,3,4    不允许存储重复元素，无序<br>        }</Integer></Integer></p><pre><code>}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>MyException.Demo01RegisterException</p><a id="more"></a><p>package com.MyException;</p><p>import java.util.Scanner;</p><p>/*<br>    要求：我们模拟注册操作，如果用户名已存在，则抛出异常并提示：亲，该用户名已经被注册。<br>    分析：<br>        1.使用数组保存已经注册过的用户名（数据库）<br>        2.使用Scanner获取用户输入的注册的用户名（前端，页面）<br>        3.定义一个方法，对输入的注册的用户名进行判断<br>            遍历存储已经注册过用户名的数组，获取每一个用户名<br>            使用获取到的用户名和用户输入的用户名比较<br>                true:<br>                    用户名已经存在，抛出RegisterException异常，告知用户“亲，该用户名已经被注册。”<br>                false:<br>                    继续遍历比较<br>                    如果循环结束了，还没有找到重复的用户名，提示用户“恭喜您，注册成功！”<br> */<br>public class Demo01RegisterException {<br>    // 1.使用数组保存已经注册过的用户名（数据库）<br>    static String[] usernames = {“张三”, “李四”, “王五”};</p><pre><code>public static void main(String[] args) /*throws RegisterException*/ {    // 2.使用Scanner获取用户输入的注册的用户名（前端，页面）    Scanner scanner = new Scanner(System.in);    System.out.println(&quot;请输入您要注册的用户名：&quot;);    String username = scanner.next();    checkUsernames(username);}// 3.定义一个方法，对输入的注册的用户名进行判断public static void checkUsernames(String username) /*throws RegisterException*/ {    // 遍历存储已经注册过用户名的数组，获取每一个用户名    for (String name : usernames) {        // 使用获取到的用户名和用户输入的用户名比较        if (name.equals(username)) {            // true：用户名已经存在，抛出RegisterException异常，告知用户“亲，该用户名已经被注册。”            try {                throw new RegisterException(&quot;亲，该用户名已经被注册。&quot;);            } catch (RegisterException e) {                e.printStackTrace();                return; // 结束方法            }        }    }    // 如果循环结束了，还没有找到重复的用户名，提示用户“恭喜您，注册成功！”    System.out.println(&quot;恭喜您，注册成功！&quot;);}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Set.Demo01Set&lt;/p&gt;
+      &lt;p&gt;MyException.Demo01RegisterException&lt;/p&gt;
     
     </summary>
     
@@ -472,7 +449,30 @@
       <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Set" scheme="http://yoursite.com/tags/Set/"/>
+      <category term="MyException" scheme="http://yoursite.com/tags/MyException/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Map</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Map/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Map/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.817Z</updated>
+    
+    <content type="html"><![CDATA[<p>Map.Demo01Map</p><a id="more"></a><p>package com.Map;</p><p>import java.util.HashMap;<br>import java.util.Map;</p><p>/*<br>    java.util.Map&lt;k,v&gt; 集合<br>    Map集合的特点：<br>        1.Map集合是一个双列集合，一个元素包含两个值(一个key,一个value)<br>        2.Map集合中的元素，key和value的数据类型可以相同，也可以不同<br>        3.Map集合中的元素，key是不允许重复的，value可以重复<br>        4.Map集合中的元素，key和value是一一对应的<br>    java.util.HashMap&lt;k,v&gt;集合 implements Map&lt;k,v&gt;接口<br>    HashMap集合的特点：<br>        1.HashMap集合底层是哈希表：查询的速度特别快<br>        2.HashMap集合是一个无序的集合，存储元素与取出的元素有可能不一致<br>    java.util.LinkedHashMap&lt;k,v&gt;集合 extends HashMap(k,v) 集合<br>    LinkedHAshMap的特点：<br>        1.LinkedHashMap集合底层是哈希表+链表（保证迭代的顺序）<br>        2.LinkedHashMap集合是一个有序的集合。存储元素和取出元素的顺序一致<br> */<br>public class Demo01Map {<br>    public static void main(String[] args) {<br>        show01();<br>        System.out.println(“=======================”);<br>        show02();<br>        System.out.println(“=======================”);<br>        show03();<br>        System.out.println(“=======================”);<br>        show04();<br>    }</p><pre><code>/*    boolean containsKey(Object key) 判断集合中是否包含指定的键    包含返回true，不包含返回false */private static void show04() {    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();    map.put(&quot;第一&quot;,1);    map.put(&quot;第二&quot;,2);    map.put(&quot;第三&quot;,3);    map.put(&quot;第四&quot;,4);    boolean get1 = map.containsKey(&quot;第一&quot;);    System.out.println(get1); // true    boolean get2 = map.containsKey(&quot;第五&quot;);    System.out.println(get2); // false}/*    public V get(Object key) 根据指定的键，在Map集合中获取对应的值    返回值：        key存在，返回对应的value值        key不存在，返回null */private static void show03() {    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();    map.put(&quot;第一&quot;,1);    map.put(&quot;第二&quot;,2);    map.put(&quot;第三&quot;,3);    map.put(&quot;第四&quot;,4);    Integer get1 = map.get(&quot;第一&quot;);    System.out.println(get1); // 1    Integer get2 = map.get(&quot;第五&quot;);    System.out.println(get2); // null}/*    public V remove(Object key)：把指定的键所对应的键值对元素 在Map集合中删除。返回被删除元素的值 */private static void show02() {    // 创建Map集合对象，多态    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();    String v1 = map.put(&quot;小米&quot;, &quot;小花&quot;);    System.out.println(v1); // null    String v2 = map.put(&quot;小米&quot;, &quot;小花花&quot;);    System.out.println(v2); // 小花    System.out.println(map); // {小米=小花花}    map.put(&quot;1&quot;, &quot;2&quot;);    map.put(&quot;3&quot;, &quot;2&quot;);    map.put(&quot;4&quot;, &quot;4&quot;);    System.out.println(map);    String remove = map.remove(&quot;1&quot;);    System.out.println(remove);    System.out.println(map);}/*    public v put(K key, V value)：把指定的键与指定的值添加到Map集合中去        返回值: v            存储键值对时，key不重复，返回值v是null            存储键值对时，key重复，会使用新的value替换map中重复的value，返回被替换的value值 */private static void show01() {    // 创建Map集合对象，多态    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();    String v1 = map.put(&quot;小米&quot;, &quot;小花&quot;);    System.out.println(v1); // null    String v2 = map.put(&quot;小米&quot;, &quot;小花花&quot;);    System.out.println(v2); // 小花    System.out.println(map); // {小米=小花花}    map.put(&quot;1&quot;, &quot;2&quot;);    map.put(&quot;3&quot;, &quot;2&quot;);    map.put(&quot;4&quot;, &quot;4&quot;);    System.out.println(map);}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Map.Demo01Map&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Map" scheme="http://yoursite.com/tags/Map/"/>
     
   </entry>
   
