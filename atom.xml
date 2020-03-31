@@ -109,6 +109,29 @@
   </entry>
   
   <entry>
+    <title>BaoZiPu</title>
+    <link href="http://yoursite.com/2020/03/28/BaoZiPu/"/>
+    <id>http://yoursite.com/2020/03/28/BaoZiPu/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.871Z</updated>
+    
+    <content type="html"><![CDATA[<p>WaitAndNotify.BaoZiPu</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    生产者（包子铺）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：生产包子<br>    对包子的状态进行判断<br>    true：有包子<br>        包子铺调用wait方法进入等待状态<br>    false：没有包子<br>        包子铺生产包子<br>        增加趣味：交替生产两种包子<br>            两种状态（i%2 == 0）<br>        包子铺生产好了包子<br>        修改包子的状态为true有<br>        唤醒吃货线程，让吃货线程吃包子<br>    注意：<br>        包子铺线程和包子线程关系–&gt;通信（互斥）<br>        必须使用同步技术保证两个线程只能有一个在执行<br>        锁对象必须保证唯一，可以使用包子对象作为锁对象<br>        包子铺类和吃货类就需要把包子对象作为参数传递进来<br>            1.需要在成员位置创建一个包子变量<br>            2.使用带参数构造方法，为这个包子变量赋值<br> */<br>public class BaoZiPu extends Thread {<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public BaoZiPu(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：生产包子@Overridepublic void run() {    // 定义一个变量    int count = 0;    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子的状态进行判断            if (baoZi.flag == true) {                // 包子铺调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            // 被唤醒之后执行，包子铺生产包子            // 增加趣味：交替生产两种包子 两种状态（i%2 == 0）            if (count % 2 == 0) {                baoZi.pi = &quot;薄皮&quot;;                baoZi.xian = &quot;三鲜馅&quot;;            } else {                baoZi.pi = &quot;厚皮&quot;;                baoZi.xian = &quot;牛肉大葱馅&quot;;            }            count++;            System.out.println(&quot;包子铺正在生产&quot; + baoZi.pi + baoZi.xian);            // 需要3秒做包子            try {                Thread.sleep(3000);            } catch (InterruptedException e) {                e.printStackTrace();            }            // 包子铺生产好了包子            // 修改包子的状态为true有            baoZi.flag = true;            // 唤醒吃货线程，让吃货线程吃包子            baoZi.notify();            System.out.println(&quot;包子铺已经生产完&quot; + baoZi.pi + baoZi.xian);        }    }}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;WaitAndNotify.BaoZiPu&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="WaitAndNotify" scheme="http://yoursite.com/tags/WaitAndNotify/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Chihuo</title>
     <link href="http://yoursite.com/2020/03/28/Chihuo/"/>
     <id>http://yoursite.com/2020/03/28/Chihuo/</id>
@@ -132,17 +155,17 @@
   </entry>
   
   <entry>
-    <title>BaoZiPu</title>
-    <link href="http://yoursite.com/2020/03/28/BaoZiPu/"/>
-    <id>http://yoursite.com/2020/03/28/BaoZiPu/</id>
+    <title>Demo</title>
+    <link href="http://yoursite.com/2020/03/28/Demo/"/>
+    <id>http://yoursite.com/2020/03/28/Demo/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.871Z</updated>
+    <updated>2020-03-28T02:36:45.873Z</updated>
     
-    <content type="html"><![CDATA[<p>WaitAndNotify.BaoZiPu</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    生产者（包子铺）类：是一个线程类，可以继承Thread<br>    设置线程任务（run）：生产包子<br>    对包子的状态进行判断<br>    true：有包子<br>        包子铺调用wait方法进入等待状态<br>    false：没有包子<br>        包子铺生产包子<br>        增加趣味：交替生产两种包子<br>            两种状态（i%2 == 0）<br>        包子铺生产好了包子<br>        修改包子的状态为true有<br>        唤醒吃货线程，让吃货线程吃包子<br>    注意：<br>        包子铺线程和包子线程关系–&gt;通信（互斥）<br>        必须使用同步技术保证两个线程只能有一个在执行<br>        锁对象必须保证唯一，可以使用包子对象作为锁对象<br>        包子铺类和吃货类就需要把包子对象作为参数传递进来<br>            1.需要在成员位置创建一个包子变量<br>            2.使用带参数构造方法，为这个包子变量赋值<br> */<br>public class BaoZiPu extends Thread {<br>    // 1.需要在成员位置创建一个包子变量<br>    private BaoZi baoZi;</p><pre><code>// 2.使用带参数构造方法，为这个包子变量赋值public BaoZiPu(BaoZi baoZi) {    this.baoZi = baoZi;}// 设置线程任务（run）：生产包子@Overridepublic void run() {    // 定义一个变量    int count = 0;    while (true) {        // 必须使用同步技术保证两个线程只能有一个在执行        synchronized (baoZi) {            // 对包子的状态进行判断            if (baoZi.flag == true) {                // 包子铺调用wait方法进入等待状态                try {                    baoZi.wait();                } catch (InterruptedException e) {                    e.printStackTrace();                }            }            // 被唤醒之后执行，包子铺生产包子            // 增加趣味：交替生产两种包子 两种状态（i%2 == 0）            if (count % 2 == 0) {                baoZi.pi = &quot;薄皮&quot;;                baoZi.xian = &quot;三鲜馅&quot;;            } else {                baoZi.pi = &quot;厚皮&quot;;                baoZi.xian = &quot;牛肉大葱馅&quot;;            }            count++;            System.out.println(&quot;包子铺正在生产&quot; + baoZi.pi + baoZi.xian);            // 需要3秒做包子            try {                Thread.sleep(3000);            } catch (InterruptedException e) {                e.printStackTrace();            }            // 包子铺生产好了包子            // 修改包子的状态为true有            baoZi.flag = true;            // 唤醒吃货线程，让吃货线程吃包子            baoZi.notify();            System.out.println(&quot;包子铺已经生产完&quot; + baoZi.pi + baoZi.xian);        }    }}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>WaitAndNotify.Demo</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    测试类：<br>    包含main方法，程序执行的入口，启动程序<br>    创建包子对象<br>    创建包子铺进程，开启，生产包子<br>    创建吃货进程，开启，吃包子<br> */<br>public class Demo {<br>    public static void main(String[] args) {<br>        // 创建包子对象<br>        BaoZi baoZi = new BaoZi();<br>        // 创建包子铺进程，开启，生产包子<br>        new BaoZiPu(baoZi).start();<br>        // 创建吃货进程，开启，吃包子<br>        new Chihuo(baoZi).start();<br>    }<br>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;WaitAndNotify.BaoZiPu&lt;/p&gt;
+      &lt;p&gt;WaitAndNotify.Demo&lt;/p&gt;
     
     </summary>
     
@@ -178,17 +201,17 @@
   </entry>
   
   <entry>
-    <title>Demo</title>
-    <link href="http://yoursite.com/2020/03/28/Demo/"/>
-    <id>http://yoursite.com/2020/03/28/Demo/</id>
+    <title>Demo01Exception</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Exception/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Exception/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.873Z</updated>
+    <updated>2020-03-28T02:36:45.792Z</updated>
     
-    <content type="html"><![CDATA[<p>WaitAndNotify.Demo</p><a id="more"></a><p>package com.ThreadAndLambda.WaitAndNotify;</p><p>/*<br>    测试类：<br>    包含main方法，程序执行的入口，启动程序<br>    创建包子对象<br>    创建包子铺进程，开启，生产包子<br>    创建吃货进程，开启，吃包子<br> */<br>public class Demo {<br>    public static void main(String[] args) {<br>        // 创建包子对象<br>        BaoZi baoZi = new BaoZi();<br>        // 创建包子铺进程，开启，生产包子<br>        new BaoZiPu(baoZi).start();<br>        // 创建吃货进程，开启，吃包子<br>        new Chihuo(baoZi).start();<br>    }<br>}</p>]]></content>
+    <content type="html"><![CDATA[<p>Exception.Demo01Exception</p><a id="more"></a><p>package com.Exception;</p><p>/*<br>    java.lang.Throwable：类是java语言中所有错误或异常的超类<br>        Exception：编译器异常，进行编译（写代码）java程序出现的异常<br>            RuntimeException：运行期异常，java程序运行过程中出现的问题<br>        Error：错误<br>            错误就相当于程序得了绝症，必须修改源代码，程序才能继续执行<br> <em>/<br>public class Demo01Exception {<br>    public static void main(String[] args) {<br>        /</em>// Exception：编译期异常，进行编译（写代码）java程序出现的问题<br>        SimpleDateFormat sdf = new SimpleDateFormat(“yyyy-MM-dd”); // 用来格式化日期<br>        try {<br>            Date date = sdf.parse(“1999-09-09”); // 把字符串格式的日期解析为Date格式的日期<br>        } catch (ParseException e) {<br>            e.printStackTrace();<br>        }<br>        System.out.println();*/</p><pre><code>    // RuntimeException：运行期异常，java程序运行过程中出现的问题    /*int[] arr = {1, 2, 3};        // System.out.println(arr[1]);    try {        // 可能会出现异常的代码        System.out.println(arr[3]);    } catch (Exception e) {        // 异常的处理逻辑        System.out.println(e);    }*/    /*        Error：错误        OutOfMemoryError: Java heap space        内存溢出的错误，创建的数组太大，超出了给JVM的内存     */    // int[] arr = new int[1024*1024*1024];    // 必须修改代码，创建的数组小一点    int[] arr = new int[1024*1024];    System.out.println(&quot;后续代码&quot;);}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;WaitAndNotify.Demo&lt;/p&gt;
+      &lt;p&gt;Exception.Demo01Exception&lt;/p&gt;
     
     </summary>
     
@@ -196,30 +219,7 @@
       <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="WaitAndNotify" scheme="http://yoursite.com/tags/WaitAndNotify/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01Debug</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01Debug/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01Debug/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.790Z</updated>
-    
-    <content type="html"><![CDATA[<p>Debug.Demo01Debug</p><a id="more"></a><p>package com.Debug;</p><p>/*<br>    Debug调试程序：<br>        可以让代码逐行执行，查看代码执行的过程，调试程序中出现的bug<br>    使用方法：<br>        在行号的右边，鼠标左键单击，添加断点（每个方法的第一行，哪里有bug就添加到哪里）<br>        右键，选择Debug执行程序<br>        程序就会停留在添加的第一行断点处<br>    执行程序：<br>        F8：逐行执行程序<br>        F7：进入到方法中<br>        Shift+F8：跳出方法<br>        F9：跳到下一个断点，如果没有下一个断点，就结束程序<br>        Ctrl+F2：退出Debug模式，停止程序<br>        Console：切换到控制台<br> */<br>public class Demo01Debug {<br>    public static void main(String[] args) {<br>//        int a = 10;<br>//        int b = 20;<br>//        int sum = a + b;<br>//        System.out.println(sum);</p><pre><code>    for (int i = 0; i &lt; 3; i++) {        System.out.println(i);    }}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Debug.Demo01Debug&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Debug" scheme="http://yoursite.com/tags/Debug/"/>
+      <category term="Exception" scheme="http://yoursite.com/tags/Exception/"/>
     
   </entry>
   
@@ -247,17 +247,17 @@
   </entry>
   
   <entry>
-    <title>Demo01Exception</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01Exception/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01Exception/</id>
+    <title>Demo01Debug</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Debug/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Debug/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.792Z</updated>
+    <updated>2020-03-28T02:36:45.790Z</updated>
     
-    <content type="html"><![CDATA[<p>Exception.Demo01Exception</p><a id="more"></a><p>package com.Exception;</p><p>/*<br>    java.lang.Throwable：类是java语言中所有错误或异常的超类<br>        Exception：编译器异常，进行编译（写代码）java程序出现的异常<br>            RuntimeException：运行期异常，java程序运行过程中出现的问题<br>        Error：错误<br>            错误就相当于程序得了绝症，必须修改源代码，程序才能继续执行<br> <em>/<br>public class Demo01Exception {<br>    public static void main(String[] args) {<br>        /</em>// Exception：编译期异常，进行编译（写代码）java程序出现的问题<br>        SimpleDateFormat sdf = new SimpleDateFormat(“yyyy-MM-dd”); // 用来格式化日期<br>        try {<br>            Date date = sdf.parse(“1999-09-09”); // 把字符串格式的日期解析为Date格式的日期<br>        } catch (ParseException e) {<br>            e.printStackTrace();<br>        }<br>        System.out.println();*/</p><pre><code>    // RuntimeException：运行期异常，java程序运行过程中出现的问题    /*int[] arr = {1, 2, 3};        // System.out.println(arr[1]);    try {        // 可能会出现异常的代码        System.out.println(arr[3]);    } catch (Exception e) {        // 异常的处理逻辑        System.out.println(e);    }*/    /*        Error：错误        OutOfMemoryError: Java heap space        内存溢出的错误，创建的数组太大，超出了给JVM的内存     */    // int[] arr = new int[1024*1024*1024];    // 必须修改代码，创建的数组小一点    int[] arr = new int[1024*1024];    System.out.println(&quot;后续代码&quot;);}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>Debug.Demo01Debug</p><a id="more"></a><p>package com.Debug;</p><p>/*<br>    Debug调试程序：<br>        可以让代码逐行执行，查看代码执行的过程，调试程序中出现的bug<br>    使用方法：<br>        在行号的右边，鼠标左键单击，添加断点（每个方法的第一行，哪里有bug就添加到哪里）<br>        右键，选择Debug执行程序<br>        程序就会停留在添加的第一行断点处<br>    执行程序：<br>        F8：逐行执行程序<br>        F7：进入到方法中<br>        Shift+F8：跳出方法<br>        F9：跳到下一个断点，如果没有下一个断点，就结束程序<br>        Ctrl+F2：退出Debug模式，停止程序<br>        Console：切换到控制台<br> */<br>public class Demo01Debug {<br>    public static void main(String[] args) {<br>//        int a = 10;<br>//        int b = 20;<br>//        int sum = a + b;<br>//        System.out.println(sum);</p><pre><code>    for (int i = 0; i &lt; 3; i++) {        System.out.println(i);    }}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Exception.Demo01Exception&lt;/p&gt;
+      &lt;p&gt;Debug.Demo01Debug&lt;/p&gt;
     
     </summary>
     
@@ -265,30 +265,7 @@
       <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Exception" scheme="http://yoursite.com/tags/Exception/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01InnerClassThread</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01InnerClassThread/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01InnerClassThread/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.844Z</updated>
-    
-    <content type="html"><![CDATA[<p>InnerClassThread.Demo01InnerClassThread</p><a id="more"></a><p>package com.Thread.InnerClassThread;</p><p>/*<br>    匿名内部类方式实现线程的创建</p><pre><code>匿名：没有名字内部类：写在其他内部的类匿名内部类：简化代码    把子类继承父类，重写父类的方法。创建子类对象合一步完成    把实现类实现接口，重写接口中的方法，创建实现类对象合成一步完成匿名内部类的最终产物：子类/实现类对象，而这个类没有名字格式：    new 父类/接口() {        重写父类/接口中的方法    }</code></pre><p> */<br>public class Demo01InnerClassThread {<br>    public static void main(String[] args) {<br>        // 线程的父类是Thread<br>        new Thread() {<br>            @Override<br>            public void run() {<br>                for (int i = 0; i &lt; 20; i++) {<br>                    System.out.println(Thread.currentThread().getName() + “–&gt;” +i);<br>                }<br>            }<br>        }.start();</p><pre><code>    new Thread() {        @Override        public void run() {            for (int i = 20; i &lt; 40; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; +i);            }        }    }.start();    // 线程的接口Runnable    Runnable runnable = new Runnable() {        @Override        public void run() {            for (int i = 1000; i &lt; 1020; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; + i);            }        }    };    new Thread(runnable).start();    // 简化接口的方式    new Thread(new Runnable() {        @Override        public void run() {            for (int i = 2000; i &lt; 2020; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; + i);            }        }    }).start();}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;InnerClassThread.Demo01InnerClassThread&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="InnerClassThread" scheme="http://yoursite.com/tags/InnerClassThread/"/>
+      <category term="Debug" scheme="http://yoursite.com/tags/Debug/"/>
     
   </entry>
   
@@ -312,6 +289,52 @@
     
     
       <category term="Generic" scheme="http://yoursite.com/tags/Generic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01MainThread</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01MainThread/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01MainThread/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.836Z</updated>
+    
+    <content type="html"><![CDATA[<p>Thread.Demo01MainThread</p><a id="more"></a><p>package com.Thread;</p><p>/*<br>    主线程：执行主（main）方法的线程</p><pre><code>单线程程序：java程序中只有一个线程执行从main方法开始。从上到下依次执行</code></pre><p> */<br>public class Demo01MainThread {<br>    public static void main(String[] args) {<br>        Person p1 = new Person(“小强”);<br>        p1.run();</p><pre><code>    Person p2 = new Person(&quot;旺财&quot;);    p2.run();}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Thread.Demo01MainThread&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Thread" scheme="http://yoursite.com/tags/Thread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01RegisterException</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01RegisterException/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01RegisterException/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.828Z</updated>
+    
+    <content type="html"><![CDATA[<p>MyException.Demo01RegisterException</p><a id="more"></a><p>package com.MyException;</p><p>import java.util.Scanner;</p><p>/*<br>    要求：我们模拟注册操作，如果用户名已存在，则抛出异常并提示：亲，该用户名已经被注册。<br>    分析：<br>        1.使用数组保存已经注册过的用户名（数据库）<br>        2.使用Scanner获取用户输入的注册的用户名（前端，页面）<br>        3.定义一个方法，对输入的注册的用户名进行判断<br>            遍历存储已经注册过用户名的数组，获取每一个用户名<br>            使用获取到的用户名和用户输入的用户名比较<br>                true:<br>                    用户名已经存在，抛出RegisterException异常，告知用户“亲，该用户名已经被注册。”<br>                false:<br>                    继续遍历比较<br>                    如果循环结束了，还没有找到重复的用户名，提示用户“恭喜您，注册成功！”<br> */<br>public class Demo01RegisterException {<br>    // 1.使用数组保存已经注册过的用户名（数据库）<br>    static String[] usernames = {“张三”, “李四”, “王五”};</p><pre><code>public static void main(String[] args) /*throws RegisterException*/ {    // 2.使用Scanner获取用户输入的注册的用户名（前端，页面）    Scanner scanner = new Scanner(System.in);    System.out.println(&quot;请输入您要注册的用户名：&quot;);    String username = scanner.next();    checkUsernames(username);}// 3.定义一个方法，对输入的注册的用户名进行判断public static void checkUsernames(String username) /*throws RegisterException*/ {    // 遍历存储已经注册过用户名的数组，获取每一个用户名    for (String name : usernames) {        // 使用获取到的用户名和用户输入的用户名比较        if (name.equals(username)) {            // true：用户名已经存在，抛出RegisterException异常，告知用户“亲，该用户名已经被注册。”            try {                throw new RegisterException(&quot;亲，该用户名已经被注册。&quot;);            } catch (RegisterException e) {                e.printStackTrace();                return; // 结束方法            }        }    }    // 如果循环结束了，还没有找到重复的用户名，提示用户“恭喜您，注册成功！”    System.out.println(&quot;恭喜您，注册成功！&quot;);}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;MyException.Demo01RegisterException&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="MyException" scheme="http://yoursite.com/tags/MyException/"/>
     
   </entry>
   
@@ -362,17 +385,17 @@
   </entry>
   
   <entry>
-    <title>Demo01Map</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01Map/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01Map/</id>
+    <title>Demo01InnerClassThread</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01InnerClassThread/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01InnerClassThread/</id>
     <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.817Z</updated>
+    <updated>2020-03-28T02:36:45.844Z</updated>
     
-    <content type="html"><![CDATA[<p>Map.Demo01Map</p><a id="more"></a><p>package com.Map;</p><p>import java.util.HashMap;<br>import java.util.Map;</p><p>/*<br>    java.util.Map&lt;k,v&gt; 集合<br>    Map集合的特点：<br>        1.Map集合是一个双列集合，一个元素包含两个值(一个key,一个value)<br>        2.Map集合中的元素，key和value的数据类型可以相同，也可以不同<br>        3.Map集合中的元素，key是不允许重复的，value可以重复<br>        4.Map集合中的元素，key和value是一一对应的<br>    java.util.HashMap&lt;k,v&gt;集合 implements Map&lt;k,v&gt;接口<br>    HashMap集合的特点：<br>        1.HashMap集合底层是哈希表：查询的速度特别快<br>        2.HashMap集合是一个无序的集合，存储元素与取出的元素有可能不一致<br>    java.util.LinkedHashMap&lt;k,v&gt;集合 extends HashMap(k,v) 集合<br>    LinkedHAshMap的特点：<br>        1.LinkedHashMap集合底层是哈希表+链表（保证迭代的顺序）<br>        2.LinkedHashMap集合是一个有序的集合。存储元素和取出元素的顺序一致<br> */<br>public class Demo01Map {<br>    public static void main(String[] args) {<br>        show01();<br>        System.out.println(“=======================”);<br>        show02();<br>        System.out.println(“=======================”);<br>        show03();<br>        System.out.println(“=======================”);<br>        show04();<br>    }</p><pre><code>/*    boolean containsKey(Object key) 判断集合中是否包含指定的键    包含返回true，不包含返回false */private static void show04() {    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();    map.put(&quot;第一&quot;,1);    map.put(&quot;第二&quot;,2);    map.put(&quot;第三&quot;,3);    map.put(&quot;第四&quot;,4);    boolean get1 = map.containsKey(&quot;第一&quot;);    System.out.println(get1); // true    boolean get2 = map.containsKey(&quot;第五&quot;);    System.out.println(get2); // false}/*    public V get(Object key) 根据指定的键，在Map集合中获取对应的值    返回值：        key存在，返回对应的value值        key不存在，返回null */private static void show03() {    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();    map.put(&quot;第一&quot;,1);    map.put(&quot;第二&quot;,2);    map.put(&quot;第三&quot;,3);    map.put(&quot;第四&quot;,4);    Integer get1 = map.get(&quot;第一&quot;);    System.out.println(get1); // 1    Integer get2 = map.get(&quot;第五&quot;);    System.out.println(get2); // null}/*    public V remove(Object key)：把指定的键所对应的键值对元素 在Map集合中删除。返回被删除元素的值 */private static void show02() {    // 创建Map集合对象，多态    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();    String v1 = map.put(&quot;小米&quot;, &quot;小花&quot;);    System.out.println(v1); // null    String v2 = map.put(&quot;小米&quot;, &quot;小花花&quot;);    System.out.println(v2); // 小花    System.out.println(map); // {小米=小花花}    map.put(&quot;1&quot;, &quot;2&quot;);    map.put(&quot;3&quot;, &quot;2&quot;);    map.put(&quot;4&quot;, &quot;4&quot;);    System.out.println(map);    String remove = map.remove(&quot;1&quot;);    System.out.println(remove);    System.out.println(map);}/*    public v put(K key, V value)：把指定的键与指定的值添加到Map集合中去        返回值: v            存储键值对时，key不重复，返回值v是null            存储键值对时，key重复，会使用新的value替换map中重复的value，返回被替换的value值 */private static void show01() {    // 创建Map集合对象，多态    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();    String v1 = map.put(&quot;小米&quot;, &quot;小花&quot;);    System.out.println(v1); // null    String v2 = map.put(&quot;小米&quot;, &quot;小花花&quot;);    System.out.println(v2); // 小花    System.out.println(map); // {小米=小花花}    map.put(&quot;1&quot;, &quot;2&quot;);    map.put(&quot;3&quot;, &quot;2&quot;);    map.put(&quot;4&quot;, &quot;4&quot;);    System.out.println(map);}</code></pre><p>}</p>]]></content>
+    <content type="html"><![CDATA[<p>InnerClassThread.Demo01InnerClassThread</p><a id="more"></a><p>package com.Thread.InnerClassThread;</p><p>/*<br>    匿名内部类方式实现线程的创建</p><pre><code>匿名：没有名字内部类：写在其他内部的类匿名内部类：简化代码    把子类继承父类，重写父类的方法。创建子类对象合一步完成    把实现类实现接口，重写接口中的方法，创建实现类对象合成一步完成匿名内部类的最终产物：子类/实现类对象，而这个类没有名字格式：    new 父类/接口() {        重写父类/接口中的方法    }</code></pre><p> */<br>public class Demo01InnerClassThread {<br>    public static void main(String[] args) {<br>        // 线程的父类是Thread<br>        new Thread() {<br>            @Override<br>            public void run() {<br>                for (int i = 0; i &lt; 20; i++) {<br>                    System.out.println(Thread.currentThread().getName() + “–&gt;” +i);<br>                }<br>            }<br>        }.start();</p><pre><code>    new Thread() {        @Override        public void run() {            for (int i = 20; i &lt; 40; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; +i);            }        }    }.start();    // 线程的接口Runnable    Runnable runnable = new Runnable() {        @Override        public void run() {            for (int i = 1000; i &lt; 1020; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; + i);            }        }    };    new Thread(runnable).start();    // 简化接口的方式    new Thread(new Runnable() {        @Override        public void run() {            for (int i = 2000; i &lt; 2020; i++) {                System.out.println(Thread.currentThread().getName() + &quot;--&gt;&quot; + i);            }        }    }).start();}</code></pre><p>}</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Map.Demo01Map&lt;/p&gt;
+      &lt;p&gt;InnerClassThread.Demo01InnerClassThread&lt;/p&gt;
     
     </summary>
     
@@ -380,76 +403,7 @@
       <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
     
     
-      <category term="Map" scheme="http://yoursite.com/tags/Map/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01MainThread</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01MainThread/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01MainThread/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.836Z</updated>
-    
-    <content type="html"><![CDATA[<p>Thread.Demo01MainThread</p><a id="more"></a><p>package com.Thread;</p><p>/*<br>    主线程：执行主（main）方法的线程</p><pre><code>单线程程序：java程序中只有一个线程执行从main方法开始。从上到下依次执行</code></pre><p> */<br>public class Demo01MainThread {<br>    public static void main(String[] args) {<br>        Person p1 = new Person(“小强”);<br>        p1.run();</p><pre><code>    Person p2 = new Person(&quot;旺财&quot;);    p2.run();}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Thread.Demo01MainThread&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Thread" scheme="http://yoursite.com/tags/Thread/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01Runnable</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01Runnable/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01Runnable/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.863Z</updated>
-    
-    <content type="html"><![CDATA[<p>Lambda.Demo01Runnable</p><a id="more"></a><p>package com.ThreadAndLambda.Lambda;</p><p>/*<br>    使用实现Runnable接口的方式实现多线程程序<br> */<br>public class Demo01Runnable {<br>    public static void main(String[] args) {<br>        // 创建Runnable接口的实现类对象<br>        RunnableImpl runnable = new RunnableImpl();<br>        // 创建Thread类对象，构造方法中传递Runnable接口的实现类<br>        Thread thread = new Thread(runnable);<br>        // 调用start方法开启新线程，执行run方法<br>        thread.run();</p><pre><code>    // 简化代码，使用匿名内部类，实现多线程    Runnable runnable1 = new Runnable(){        @Override        public void run() {            System.out.println(Thread.currentThread().getName() + &quot;新线程创建了&quot;);        }    };    new Thread(runnable1).start();    // 简化代码    new Thread(new Runnable() {        @Override        public void run() {            System.out.println(Thread.currentThread().getName() + &quot;新线程创建了&quot;);        }    }).start();}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Lambda.Demo01Runnable&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="Lambda" scheme="http://yoursite.com/tags/Lambda/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo01RegisterException</title>
-    <link href="http://yoursite.com/2020/03/28/Demo01RegisterException/"/>
-    <id>http://yoursite.com/2020/03/28/Demo01RegisterException/</id>
-    <published>2020-03-28T02:35:40.000Z</published>
-    <updated>2020-03-28T02:36:45.828Z</updated>
-    
-    <content type="html"><![CDATA[<p>MyException.Demo01RegisterException</p><a id="more"></a><p>package com.MyException;</p><p>import java.util.Scanner;</p><p>/*<br>    要求：我们模拟注册操作，如果用户名已存在，则抛出异常并提示：亲，该用户名已经被注册。<br>    分析：<br>        1.使用数组保存已经注册过的用户名（数据库）<br>        2.使用Scanner获取用户输入的注册的用户名（前端，页面）<br>        3.定义一个方法，对输入的注册的用户名进行判断<br>            遍历存储已经注册过用户名的数组，获取每一个用户名<br>            使用获取到的用户名和用户输入的用户名比较<br>                true:<br>                    用户名已经存在，抛出RegisterException异常，告知用户“亲，该用户名已经被注册。”<br>                false:<br>                    继续遍历比较<br>                    如果循环结束了，还没有找到重复的用户名，提示用户“恭喜您，注册成功！”<br> */<br>public class Demo01RegisterException {<br>    // 1.使用数组保存已经注册过的用户名（数据库）<br>    static String[] usernames = {“张三”, “李四”, “王五”};</p><pre><code>public static void main(String[] args) /*throws RegisterException*/ {    // 2.使用Scanner获取用户输入的注册的用户名（前端，页面）    Scanner scanner = new Scanner(System.in);    System.out.println(&quot;请输入您要注册的用户名：&quot;);    String username = scanner.next();    checkUsernames(username);}// 3.定义一个方法，对输入的注册的用户名进行判断public static void checkUsernames(String username) /*throws RegisterException*/ {    // 遍历存储已经注册过用户名的数组，获取每一个用户名    for (String name : usernames) {        // 使用获取到的用户名和用户输入的用户名比较        if (name.equals(username)) {            // true：用户名已经存在，抛出RegisterException异常，告知用户“亲，该用户名已经被注册。”            try {                throw new RegisterException(&quot;亲，该用户名已经被注册。&quot;);            } catch (RegisterException e) {                e.printStackTrace();                return; // 结束方法            }        }    }    // 如果循环结束了，还没有找到重复的用户名，提示用户“恭喜您，注册成功！”    System.out.println(&quot;恭喜您，注册成功！&quot;);}</code></pre><p>}</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;MyException.Demo01RegisterException&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
-    
-    
-      <category term="MyException" scheme="http://yoursite.com/tags/MyException/"/>
+      <category term="InnerClassThread" scheme="http://yoursite.com/tags/InnerClassThread/"/>
     
   </entry>
   
@@ -473,6 +427,52 @@
     
     
       <category term="SetName" scheme="http://yoursite.com/tags/SetName/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Sleep</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Sleep/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Sleep/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.855Z</updated>
+    
+    <content type="html"><![CDATA[<p>Sleep.Demo01Sleep</p><a id="more"></a><p>package com.Thread.Sleep;</p><p>/*<br>    static void sleep(long millis) 在指定的毫秒数内让当前正在执行的线程休眠（暂停执行）<br>    毫秒数结束后，线程继续执行<br> */<br>public class Demo01Sleep {<br>    public static void main(String[] args) {<br>        // 模拟秒表<br>        for (int i = 0; i &lt; 20; i++) {<br>            System.out.println(i);<br>            try {<br>                Thread.sleep(1000);<br>            } catch (InterruptedException e) {<br>                e.printStackTrace();<br>            }<br>        }<br>    }<br>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Sleep.Demo01Sleep&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Sleep" scheme="http://yoursite.com/tags/Sleep/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo01Set</title>
+    <link href="http://yoursite.com/2020/03/28/Demo01Set/"/>
+    <id>http://yoursite.com/2020/03/28/Demo01Set/</id>
+    <published>2020-03-28T02:35:40.000Z</published>
+    <updated>2020-03-28T02:36:45.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>Set.Demo01Set</p><a id="more"></a><p>package com.Set;</p><p>import java.util.HashSet;<br>import java.util.Iterator;<br>import java.util.Set;</p><p>/*<br>    java.util.Set接口 extends Collections接口<br>    Set接口的特点：<br>        1.不允许存储重复的元素<br>        2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历<br>    java.util.HashSet集合 implements Set接口<br>    HashSet特点：<br>        1.不允许存储重复元素<br>        2.没有索引，没有带索引的方法，也不能使用普通的for循环遍历<br>        3.是一个无序的集合，存储元素和取出元素的顺序有可能不一致<br>        4.底层是一个哈希表结构（查询速度非常快）<br> */<br>public class Demo01Set {<br>    public static void main(String[] args) {<br>        Set<Integer> set = new HashSet&lt;&gt;();<br>        // 使用add方法往集合添加数据<br>        set.add(1);<br>        set.add(4);<br>        set.add(3);<br>        set.add(1);<br>        // 使用迭代器遍历set集合<br>        Iterator<Integer> iterator = set.iterator();<br>        while (iterator.hasNext()) {<br>            Integer next = iterator.next();<br>            System.out.println(next); // 1,3,4   不允许存储重复元素，无序<br>        }<br>        // 使用增强for遍历set集合<br>        System.out.println(“======================”);<br>        for (Integer i : set) {<br>            System.out.println(i); // 1,3,4    不允许存储重复元素，无序<br>        }</Integer></Integer></p><pre><code>}</code></pre><p>}</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Set.Demo01Set&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="初学JAVA" scheme="http://yoursite.com/categories/%E5%88%9D%E5%AD%A6JAVA/"/>
+    
+    
+      <category term="Set" scheme="http://yoursite.com/tags/Set/"/>
     
   </entry>
   
