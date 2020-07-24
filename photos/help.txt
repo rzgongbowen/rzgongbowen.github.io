@@ -1,0 +1,4 @@
+1.向photos添加照片（格式：yyyy-mm-dd_name.jpg/png）
+2.执行python tool.py
+3.执行完2之后，会生成data.json，会向min_photos文件夹添加photos文件夹内的照片的压缩后的照片
+4.自行向gitee或者github对应的仓库（文件夹photos,min_photos）添加对应的照片
