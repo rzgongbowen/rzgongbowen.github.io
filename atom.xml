@@ -110,6 +110,27 @@
   </entry>
   
   <entry>
+    <title>basicExercises_Prog16</title>
+    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog16/"/>
+    <id>http://yoursite.com/2020/05/14/basicExercises_Prog16/</id>
+    <published>2020-05-14T04:09:20.000Z</published>
+    <updated>2020-05-14T04:09:24.463Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="basicExercises-Prog16-java"><a href="#basicExercises-Prog16-java" class="headerlink" title="basicExercises.Prog16.java"></a>basicExercises.Prog16.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    题目：输出9*9口诀。</span><br><span class="line">    程序分析：分行与列考虑，共9行9列，i控制行，j控制列。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog16 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        for (int i &#x3D; 1; i &lt; 10; i++) &#123;</span><br><span class="line">            for (int j &#x3D; 1; j &lt; i+1; j++)</span><br><span class="line">                System.out.print(j+&quot;*&quot;+i+&quot;&#x3D;&quot;+i*j+&quot; &quot;);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;basicExercises-Prog16-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog16-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog16.java&quot;&gt;&lt;/a&gt;basicExercises.Prog16.java&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>basicExercises_Prog12</title>
     <link href="http://yoursite.com/2020/05/14/basicExercises_Prog12/"/>
     <id>http://yoursite.com/2020/05/14/basicExercises_Prog12/</id>
@@ -121,6 +142,27 @@
     <summary type="html">
     
       &lt;h4 id=&quot;basicExercises-Prog12-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog12-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog12.java&quot;&gt;&lt;/a&gt;basicExercises.Prog12.java&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>basicExercises_Prog15</title>
+    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog15/"/>
+    <id>http://yoursite.com/2020/05/14/basicExercises_Prog15/</id>
+    <published>2020-05-14T04:09:20.000Z</published>
+    <updated>2020-05-14T04:09:24.457Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="basicExercises-Prog15-java"><a href="#basicExercises-Prog15-java" class="headerlink" title="basicExercises.Prog15.java"></a>basicExercises.Prog15.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Array;</span><br><span class="line">import java.util.Arrays;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序15】</span><br><span class="line">    题目：输入三个整数x,y,z，请把这三个数由小到大输出。</span><br><span class="line">    程序分析：我们想办法把最小的数放到x上，先将x与y进行比较，如果x&gt;y则将x与y的值进行交换，然后再用x与z进行比较，如果x&gt;z则将x与z的值进行交换，这样能使x最小。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog15 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner scanner &#x3D; new Scanner(System.in).useDelimiter(&quot;\\D&quot;);</span><br><span class="line">        System.out.println(&quot;请输入三个数：&quot;);</span><br><span class="line">        int x &#x3D; scanner.nextInt();</span><br><span class="line">        int y &#x3D; scanner.nextInt();</span><br><span class="line">        int z &#x3D; scanner.nextInt();</span><br><span class="line">        scanner.close();</span><br><span class="line">        int[] ints &#x3D;new int[]&#123;x,y,z&#125;;</span><br><span class="line">        Arrays.sort(ints);</span><br><span class="line">        for (int anInt : ints) &#123;</span><br><span class="line">            System.out.print(anInt + &quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;basicExercises-Prog15-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog15-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog15.java&quot;&gt;&lt;/a&gt;basicExercises.Prog15.java&lt;/h4&gt;
     
     </summary>
     
@@ -173,69 +215,6 @@
   </entry>
   
   <entry>
-    <title>basicExercises_Prog15</title>
-    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog15/"/>
-    <id>http://yoursite.com/2020/05/14/basicExercises_Prog15/</id>
-    <published>2020-05-14T04:09:20.000Z</published>
-    <updated>2020-05-14T04:09:24.457Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="basicExercises-Prog15-java"><a href="#basicExercises-Prog15-java" class="headerlink" title="basicExercises.Prog15.java"></a>basicExercises.Prog15.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">import java.lang.reflect.Array;</span><br><span class="line">import java.util.Arrays;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序15】</span><br><span class="line">    题目：输入三个整数x,y,z，请把这三个数由小到大输出。</span><br><span class="line">    程序分析：我们想办法把最小的数放到x上，先将x与y进行比较，如果x&gt;y则将x与y的值进行交换，然后再用x与z进行比较，如果x&gt;z则将x与z的值进行交换，这样能使x最小。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog15 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Scanner scanner &#x3D; new Scanner(System.in).useDelimiter(&quot;\\D&quot;);</span><br><span class="line">        System.out.println(&quot;请输入三个数：&quot;);</span><br><span class="line">        int x &#x3D; scanner.nextInt();</span><br><span class="line">        int y &#x3D; scanner.nextInt();</span><br><span class="line">        int z &#x3D; scanner.nextInt();</span><br><span class="line">        scanner.close();</span><br><span class="line">        int[] ints &#x3D;new int[]&#123;x,y,z&#125;;</span><br><span class="line">        Arrays.sort(ints);</span><br><span class="line">        for (int anInt : ints) &#123;</span><br><span class="line">            System.out.print(anInt + &quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;basicExercises-Prog15-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog15-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog15.java&quot;&gt;&lt;/a&gt;basicExercises.Prog15.java&lt;/h4&gt;
-    
-    </summary>
-    
-    
-      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>basicExercises_Prog16</title>
-    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog16/"/>
-    <id>http://yoursite.com/2020/05/14/basicExercises_Prog16/</id>
-    <published>2020-05-14T04:09:20.000Z</published>
-    <updated>2020-05-14T04:09:24.463Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="basicExercises-Prog16-java"><a href="#basicExercises-Prog16-java" class="headerlink" title="basicExercises.Prog16.java"></a>basicExercises.Prog16.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    题目：输出9*9口诀。</span><br><span class="line">    程序分析：分行与列考虑，共9行9列，i控制行，j控制列。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog16 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        for (int i &#x3D; 1; i &lt; 10; i++) &#123;</span><br><span class="line">            for (int j &#x3D; 1; j &lt; i+1; j++)</span><br><span class="line">                System.out.print(j+&quot;*&quot;+i+&quot;&#x3D;&quot;+i*j+&quot; &quot;);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;basicExercises-Prog16-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog16-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog16.java&quot;&gt;&lt;/a&gt;basicExercises.Prog16.java&lt;/h4&gt;
-    
-    </summary>
-    
-    
-      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>basicExercises_Prog19</title>
-    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog19/"/>
-    <id>http://yoursite.com/2020/05/14/basicExercises_Prog19/</id>
-    <published>2020-05-14T04:09:20.000Z</published>
-    <updated>2020-05-14T04:09:24.465Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="basicExercises-Prog19-java"><a href="#basicExercises-Prog19-java" class="headerlink" title="basicExercises.Prog19.java"></a>basicExercises.Prog19.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序19】</span><br><span class="line">    题目：打印出如下图案（菱形）</span><br><span class="line">        *</span><br><span class="line">       ***</span><br><span class="line">     ******</span><br><span class="line">    ********</span><br><span class="line">     ******</span><br><span class="line">      ***</span><br><span class="line">       *</span><br><span class="line">    程序分析：先把图形分成两部分来看待，前四行一个规律，后三行一个规律，利用双重 for循环，第一层控制行，第二层控制列。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog19 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F;定义变量</span><br><span class="line">        int size&#x3D;5;</span><br><span class="line">        printStar(size);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void printStar(int n) &#123;</span><br><span class="line">        &#x2F;&#x2F; 上半部分</span><br><span class="line">        for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;</span><br><span class="line">            for (int j &#x3D; 1; j &lt;&#x3D; n-i; j++)</span><br><span class="line">                System.out.print(&quot; &quot;);</span><br><span class="line">            for (int k &#x3D; 1; k &lt;&#x3D; 2*i-1; k++)</span><br><span class="line">                System.out.print(&quot;*&quot;);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 下半部分</span><br><span class="line">        for (int i &#x3D; 1; i &lt;&#x3D; n-1; i++) &#123;</span><br><span class="line">            for (int j &#x3D; 1; j &lt;&#x3D; i; j++)</span><br><span class="line">                System.out.print(&quot; &quot;);</span><br><span class="line">            for (int k &#x3D; 2*n-3; k &gt;&#x3D; 2*i-1; k--)</span><br><span class="line">                System.out.print(&quot;*&quot;);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;basicExercises-Prog19-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog19-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog19.java&quot;&gt;&lt;/a&gt;basicExercises.Prog19.java&lt;/h4&gt;
-    
-    </summary>
-    
-    
-      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>basicExercises_Prog17</title>
     <link href="http://yoursite.com/2020/05/14/basicExercises_Prog17/"/>
     <id>http://yoursite.com/2020/05/14/basicExercises_Prog17/</id>
@@ -247,48 +226,6 @@
     <summary type="html">
     
       &lt;h4 id=&quot;basicExercises-Prog17-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog17-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog17.java&quot;&gt;&lt;/a&gt;basicExercises.Prog17.java&lt;/h4&gt;
-    
-    </summary>
-    
-    
-      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>basicExercises_Prog18</title>
-    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog18/"/>
-    <id>http://yoursite.com/2020/05/14/basicExercises_Prog18/</id>
-    <published>2020-05-14T04:09:20.000Z</published>
-    <updated>2020-05-14T04:09:24.464Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="basicExercises-Prog18-java"><a href="#basicExercises-Prog18-java" class="headerlink" title="basicExercises.Prog18.java"></a>basicExercises.Prog18.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序18】</span><br><span class="line">    题目：两个乒乓球队进行比赛，各出三人。甲队为a,b,c三人，乙队为x,y,z三人。</span><br><span class="line">    已抽签决定比赛名单。有人向队员打听比赛的名单。</span><br><span class="line">    a说他不和x比，c说他不和x,z比，请编程序找出三队赛手的名单。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog18 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        String[] jiaGroup &#x3D; &#123;&quot;a&quot;,&quot;b&quot;,&quot;c&quot;&#125;;</span><br><span class="line">        String[] yiGroup &#x3D; &#123;&quot;x&quot;,&quot;y&quot;,&quot;z&quot;&#125;;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; 3; i++) &#123;</span><br><span class="line">            for (int j &#x3D; 0; j &lt; 3; j++) &#123;</span><br><span class="line">                if (jiaGroup[i].equals(&quot;a&quot;)) &#123;</span><br><span class="line">                    if (yiGroup[j].equals(&quot;x&quot;)) &#123;</span><br><span class="line">                        continue;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                if (jiaGroup[i].equals(&quot;c&quot;)) &#123;</span><br><span class="line">                    if (yiGroup[j].equals(&quot;x&quot;)) &#123;</span><br><span class="line">                        continue;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                if (jiaGroup[i].equals(&quot;c&quot;)) &#123;</span><br><span class="line">                    if (yiGroup[j].equals(&quot;z&quot;)) &#123;</span><br><span class="line">                        continue;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                &#x2F;*if (i&#x3D;&#x3D;0 &amp;&amp; j&#x3D;&#x3D;0)</span><br><span class="line">                    continue;</span><br><span class="line">                else if (i&#x3D;&#x3D;2 &amp;&amp; j&#x3D;&#x3D;0)</span><br><span class="line">                    continue;</span><br><span class="line">                else if (i&#x3D;&#x3D;2 &amp;&amp; j&#x3D;&#x3D;2)</span><br><span class="line">                    continue;*&#x2F;</span><br><span class="line">                System.out.println(jiaGroup[i]+&quot;的对手是&quot;+yiGroup[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;basicExercises-Prog18-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog18-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog18.java&quot;&gt;&lt;/a&gt;basicExercises.Prog18.java&lt;/h4&gt;
-    
-    </summary>
-    
-    
-      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>basicExercises_Prog20</title>
-    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog20/"/>
-    <id>http://yoursite.com/2020/05/14/basicExercises_Prog20/</id>
-    <published>2020-05-14T04:09:20.000Z</published>
-    <updated>2020-05-14T04:09:24.467Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="basicExercises-Prog20-java"><a href="#basicExercises-Prog20-java" class="headerlink" title="basicExercises.Prog20.java"></a>basicExercises.Prog20.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序20】</span><br><span class="line">    题目：有一分数序列：2&#x2F;1，3&#x2F;2，5&#x2F;3，8&#x2F;5，13&#x2F;8，21&#x2F;13...求出这个数列的前20项之和。</span><br><span class="line">    程序分析：请抓住分子与分母的变化规律。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog20 &#123; &#x2F;&#x2F; 32.66026079864164</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        double n1 &#x3D; 1;</span><br><span class="line">        double n2 &#x3D; 1;</span><br><span class="line">        double s &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; 20; i++) &#123;</span><br><span class="line">            double t1 &#x3D; n1;</span><br><span class="line">            double t2 &#x3D; n2;</span><br><span class="line">            n1 &#x3D; t1+t2; &#x2F;&#x2F; 后数分子为前数分子和分母的和</span><br><span class="line">            n2 &#x3D; t1; &#x2F;&#x2F; 后数分母为前数的分子</span><br><span class="line">            s +&#x3D; n1&#x2F;n2;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;basicExercises-Prog20-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog20-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog20.java&quot;&gt;&lt;/a&gt;basicExercises.Prog20.java&lt;/h4&gt;
     
     </summary>
     
@@ -320,17 +257,59 @@
   </entry>
   
   <entry>
-    <title>basicExercises_Prog25</title>
-    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog25/"/>
-    <id>http://yoursite.com/2020/05/14/basicExercises_Prog25/</id>
+    <title>basicExercises_Prog18</title>
+    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog18/"/>
+    <id>http://yoursite.com/2020/05/14/basicExercises_Prog18/</id>
     <published>2020-05-14T04:09:20.000Z</published>
-    <updated>2020-05-14T04:09:24.470Z</updated>
+    <updated>2020-05-14T04:09:24.464Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="basicExercises-Prog25-java"><a href="#basicExercises-Prog25-java" class="headerlink" title="basicExercises.Prog25.java"></a>basicExercises.Prog25.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序25】</span><br><span class="line">    题目：一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog25 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int n &#x3D; 0;</span><br><span class="line">        System.out.println(&quot;请输入一个5位数：&quot;);</span><br><span class="line">        BufferedReader bufferedReader &#x3D; new BufferedReader(new InputStreamReader((System.in)));</span><br><span class="line">        try &#123;</span><br><span class="line">            n &#x3D; Integer.parseInt(bufferedReader.readLine());</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                bufferedReader.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        palin(n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void palin(int n) &#123;</span><br><span class="line">        int m &#x3D; n;</span><br><span class="line">        int[] a &#x3D; new int[5];</span><br><span class="line">        if (n &lt; 10000 || n &gt; 99999) &#123;</span><br><span class="line">            System.out.println(&quot;输入的不是5位数！&quot;);</span><br><span class="line">            return;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            for (int i &#x3D; 0; i &lt; 5; i++) &#123;</span><br><span class="line">                a[i] &#x3D; n % 10;</span><br><span class="line">                n &#x2F;&#x3D; 10;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (a[4] &#x3D;&#x3D; a[0] &amp;&amp; a[1] &#x3D;&#x3D; a[3])</span><br><span class="line">            System.out.println(m + &quot;是回文数&quot;);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(m + &quot;不是回文数&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h4 id="basicExercises-Prog18-java"><a href="#basicExercises-Prog18-java" class="headerlink" title="basicExercises.Prog18.java"></a>basicExercises.Prog18.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序18】</span><br><span class="line">    题目：两个乒乓球队进行比赛，各出三人。甲队为a,b,c三人，乙队为x,y,z三人。</span><br><span class="line">    已抽签决定比赛名单。有人向队员打听比赛的名单。</span><br><span class="line">    a说他不和x比，c说他不和x,z比，请编程序找出三队赛手的名单。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog18 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        String[] jiaGroup &#x3D; &#123;&quot;a&quot;,&quot;b&quot;,&quot;c&quot;&#125;;</span><br><span class="line">        String[] yiGroup &#x3D; &#123;&quot;x&quot;,&quot;y&quot;,&quot;z&quot;&#125;;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; 3; i++) &#123;</span><br><span class="line">            for (int j &#x3D; 0; j &lt; 3; j++) &#123;</span><br><span class="line">                if (jiaGroup[i].equals(&quot;a&quot;)) &#123;</span><br><span class="line">                    if (yiGroup[j].equals(&quot;x&quot;)) &#123;</span><br><span class="line">                        continue;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                if (jiaGroup[i].equals(&quot;c&quot;)) &#123;</span><br><span class="line">                    if (yiGroup[j].equals(&quot;x&quot;)) &#123;</span><br><span class="line">                        continue;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                if (jiaGroup[i].equals(&quot;c&quot;)) &#123;</span><br><span class="line">                    if (yiGroup[j].equals(&quot;z&quot;)) &#123;</span><br><span class="line">                        continue;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                &#x2F;*if (i&#x3D;&#x3D;0 &amp;&amp; j&#x3D;&#x3D;0)</span><br><span class="line">                    continue;</span><br><span class="line">                else if (i&#x3D;&#x3D;2 &amp;&amp; j&#x3D;&#x3D;0)</span><br><span class="line">                    continue;</span><br><span class="line">                else if (i&#x3D;&#x3D;2 &amp;&amp; j&#x3D;&#x3D;2)</span><br><span class="line">                    continue;*&#x2F;</span><br><span class="line">                System.out.println(jiaGroup[i]+&quot;的对手是&quot;+yiGroup[j]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;basicExercises-Prog25-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog25-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog25.java&quot;&gt;&lt;/a&gt;basicExercises.Prog25.java&lt;/h4&gt;
+      &lt;h4 id=&quot;basicExercises-Prog18-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog18-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog18.java&quot;&gt;&lt;/a&gt;basicExercises.Prog18.java&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>basicExercises_Prog19</title>
+    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog19/"/>
+    <id>http://yoursite.com/2020/05/14/basicExercises_Prog19/</id>
+    <published>2020-05-14T04:09:20.000Z</published>
+    <updated>2020-05-14T04:09:24.465Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="basicExercises-Prog19-java"><a href="#basicExercises-Prog19-java" class="headerlink" title="basicExercises.Prog19.java"></a>basicExercises.Prog19.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序19】</span><br><span class="line">    题目：打印出如下图案（菱形）</span><br><span class="line">        *</span><br><span class="line">       ***</span><br><span class="line">     ******</span><br><span class="line">    ********</span><br><span class="line">     ******</span><br><span class="line">      ***</span><br><span class="line">       *</span><br><span class="line">    程序分析：先把图形分成两部分来看待，前四行一个规律，后三行一个规律，利用双重 for循环，第一层控制行，第二层控制列。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog19 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F;定义变量</span><br><span class="line">        int size&#x3D;5;</span><br><span class="line">        printStar(size);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void printStar(int n) &#123;</span><br><span class="line">        &#x2F;&#x2F; 上半部分</span><br><span class="line">        for (int i &#x3D; 1; i &lt;&#x3D; n; i++) &#123;</span><br><span class="line">            for (int j &#x3D; 1; j &lt;&#x3D; n-i; j++)</span><br><span class="line">                System.out.print(&quot; &quot;);</span><br><span class="line">            for (int k &#x3D; 1; k &lt;&#x3D; 2*i-1; k++)</span><br><span class="line">                System.out.print(&quot;*&quot;);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 下半部分</span><br><span class="line">        for (int i &#x3D; 1; i &lt;&#x3D; n-1; i++) &#123;</span><br><span class="line">            for (int j &#x3D; 1; j &lt;&#x3D; i; j++)</span><br><span class="line">                System.out.print(&quot; &quot;);</span><br><span class="line">            for (int k &#x3D; 2*n-3; k &gt;&#x3D; 2*i-1; k--)</span><br><span class="line">                System.out.print(&quot;*&quot;);</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;basicExercises-Prog19-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog19-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog19.java&quot;&gt;&lt;/a&gt;basicExercises.Prog19.java&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>basicExercises_Prog20</title>
+    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog20/"/>
+    <id>http://yoursite.com/2020/05/14/basicExercises_Prog20/</id>
+    <published>2020-05-14T04:09:20.000Z</published>
+    <updated>2020-05-14T04:09:24.467Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="basicExercises-Prog20-java"><a href="#basicExercises-Prog20-java" class="headerlink" title="basicExercises.Prog20.java"></a>basicExercises.Prog20.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序20】</span><br><span class="line">    题目：有一分数序列：2&#x2F;1，3&#x2F;2，5&#x2F;3，8&#x2F;5，13&#x2F;8，21&#x2F;13...求出这个数列的前20项之和。</span><br><span class="line">    程序分析：请抓住分子与分母的变化规律。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog20 &#123; &#x2F;&#x2F; 32.66026079864164</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        double n1 &#x3D; 1;</span><br><span class="line">        double n2 &#x3D; 1;</span><br><span class="line">        double s &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; 20; i++) &#123;</span><br><span class="line">            double t1 &#x3D; n1;</span><br><span class="line">            double t2 &#x3D; n2;</span><br><span class="line">            n1 &#x3D; t1+t2; &#x2F;&#x2F; 后数分子为前数分子和分母的和</span><br><span class="line">            n2 &#x3D; t1; &#x2F;&#x2F; 后数分母为前数的分子</span><br><span class="line">            s +&#x3D; n1&#x2F;n2;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;basicExercises-Prog20-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog20-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog20.java&quot;&gt;&lt;/a&gt;basicExercises.Prog20.java&lt;/h4&gt;
     
     </summary>
     
@@ -362,27 +341,6 @@
   </entry>
   
   <entry>
-    <title>basicExercises_Prog22</title>
-    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog22/"/>
-    <id>http://yoursite.com/2020/05/14/basicExercises_Prog22/</id>
-    <published>2020-05-14T04:09:20.000Z</published>
-    <updated>2020-05-14T04:09:24.469Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="basicExercises-Prog22-java"><a href="#basicExercises-Prog22-java" class="headerlink" title="basicExercises.Prog22.java"></a>basicExercises.Prog22.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序22】</span><br><span class="line">    题目：利用递归方法求5!。</span><br><span class="line">    程序分析：递归公式：fn&#x3D;fn_1*4!</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog22 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        fact1(10);</span><br><span class="line">        System.out.println(fact2(10));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 递归求阶乘</span><br><span class="line">    private static long fact2(int i) &#123;</span><br><span class="line">        if (i &#x3D;&#x3D; 0)</span><br><span class="line">            return 1;</span><br><span class="line">        else</span><br><span class="line">            return fact2(i-1)*i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 循环求阶乘</span><br><span class="line">    private static void fact1(int i) &#123;</span><br><span class="line">        long n &#x3D; 1;</span><br><span class="line">        for (int j &#x3D; 1; j &lt;&#x3D; i; j++) &#123;</span><br><span class="line">            n *&#x3D; j;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;basicExercises-Prog22-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog22-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog22.java&quot;&gt;&lt;/a&gt;basicExercises.Prog22.java&lt;/h4&gt;
-    
-    </summary>
-    
-    
-      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>basicExercises_Prog23</title>
     <link href="http://yoursite.com/2020/05/14/basicExercises_Prog23/"/>
     <id>http://yoursite.com/2020/05/14/basicExercises_Prog23/</id>
@@ -404,6 +362,69 @@
   </entry>
   
   <entry>
+    <title>basicExercises_Prog22</title>
+    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog22/"/>
+    <id>http://yoursite.com/2020/05/14/basicExercises_Prog22/</id>
+    <published>2020-05-14T04:09:20.000Z</published>
+    <updated>2020-05-14T04:09:24.469Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="basicExercises-Prog22-java"><a href="#basicExercises-Prog22-java" class="headerlink" title="basicExercises.Prog22.java"></a>basicExercises.Prog22.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序22】</span><br><span class="line">    题目：利用递归方法求5!。</span><br><span class="line">    程序分析：递归公式：fn&#x3D;fn_1*4!</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog22 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        fact1(10);</span><br><span class="line">        System.out.println(fact2(10));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 递归求阶乘</span><br><span class="line">    private static long fact2(int i) &#123;</span><br><span class="line">        if (i &#x3D;&#x3D; 0)</span><br><span class="line">            return 1;</span><br><span class="line">        else</span><br><span class="line">            return fact2(i-1)*i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 循环求阶乘</span><br><span class="line">    private static void fact1(int i) &#123;</span><br><span class="line">        long n &#x3D; 1;</span><br><span class="line">        for (int j &#x3D; 1; j &lt;&#x3D; i; j++) &#123;</span><br><span class="line">            n *&#x3D; j;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(n);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;basicExercises-Prog22-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog22-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog22.java&quot;&gt;&lt;/a&gt;basicExercises.Prog22.java&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>basicExercises_Prog25</title>
+    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog25/"/>
+    <id>http://yoursite.com/2020/05/14/basicExercises_Prog25/</id>
+    <published>2020-05-14T04:09:20.000Z</published>
+    <updated>2020-05-14T04:09:24.470Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="basicExercises-Prog25-java"><a href="#basicExercises-Prog25-java" class="headerlink" title="basicExercises.Prog25.java"></a>basicExercises.Prog25.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">import java.io.BufferedReader;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.InputStreamReader;</span><br><span class="line">import java.util.Scanner;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序25】</span><br><span class="line">    题目：一个5位数，判断它是不是回文数。即12321是回文数，个位与万位相同，十位与千位相同。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog25 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        int n &#x3D; 0;</span><br><span class="line">        System.out.println(&quot;请输入一个5位数：&quot;);</span><br><span class="line">        BufferedReader bufferedReader &#x3D; new BufferedReader(new InputStreamReader((System.in)));</span><br><span class="line">        try &#123;</span><br><span class="line">            n &#x3D; Integer.parseInt(bufferedReader.readLine());</span><br><span class="line">        &#125; catch (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; finally &#123;</span><br><span class="line">            try &#123;</span><br><span class="line">                bufferedReader.close();</span><br><span class="line">            &#125; catch (IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        palin(n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void palin(int n) &#123;</span><br><span class="line">        int m &#x3D; n;</span><br><span class="line">        int[] a &#x3D; new int[5];</span><br><span class="line">        if (n &lt; 10000 || n &gt; 99999) &#123;</span><br><span class="line">            System.out.println(&quot;输入的不是5位数！&quot;);</span><br><span class="line">            return;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            for (int i &#x3D; 0; i &lt; 5; i++) &#123;</span><br><span class="line">                a[i] &#x3D; n % 10;</span><br><span class="line">                n &#x2F;&#x3D; 10;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (a[4] &#x3D;&#x3D; a[0] &amp;&amp; a[1] &#x3D;&#x3D; a[3])</span><br><span class="line">            System.out.println(m + &quot;是回文数&quot;);</span><br><span class="line">        else</span><br><span class="line">            System.out.println(m + &quot;不是回文数&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;basicExercises-Prog25-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog25-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog25.java&quot;&gt;&lt;/a&gt;basicExercises.Prog25.java&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>basicExercises_Prog27</title>
+    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog27/"/>
+    <id>http://yoursite.com/2020/05/14/basicExercises_Prog27/</id>
+    <published>2020-05-14T04:09:20.000Z</published>
+    <updated>2020-05-14T04:09:24.472Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="basicExercises-Prog27-java"><a href="#basicExercises-Prog27-java" class="headerlink" title="basicExercises.Prog27.java"></a>basicExercises.Prog27.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序27】</span><br><span class="line">    题目：求100之内的素数</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog27 &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        int n &#x3D; 100;</span><br><span class="line">        System.out.print(n+&quot;以内的素数：&quot;);</span><br><span class="line">        for (int i&#x3D;2; i&lt;n+1; i++) &#123;</span><br><span class="line">            if (isPrime(i))</span><br><span class="line">                System.out.print(i + &quot; &quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F; 求素数</span><br><span class="line">    private static boolean isPrime(int i) &#123;</span><br><span class="line">        boolean flag &#x3D; true;</span><br><span class="line">        for (int j&#x3D;2; j &lt; Math.sqrt(i)+1; j++) &#123;</span><br><span class="line">            if (i%j &#x3D;&#x3D; 0) &#123;</span><br><span class="line">                flag &#x3D; false;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return flag;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;basicExercises-Prog27-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog27-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog27.java&quot;&gt;&lt;/a&gt;basicExercises.Prog27.java&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>basicExercises_Prog26</title>
     <link href="http://yoursite.com/2020/05/14/basicExercises_Prog26/"/>
     <id>http://yoursite.com/2020/05/14/basicExercises_Prog26/</id>
@@ -415,27 +436,6 @@
     <summary type="html">
     
       &lt;h4 id=&quot;basicExercises-Prog26-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog26-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog26.java&quot;&gt;&lt;/a&gt;basicExercises.Prog26.java&lt;/h4&gt;
-    
-    </summary>
-    
-    
-      <category term="JAVA基础编程练习题" scheme="http://yoursite.com/categories/JAVA%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A8%8B%E7%BB%83%E4%B9%A0%E9%A2%98/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>basicExercises_Prog29</title>
-    <link href="http://yoursite.com/2020/05/14/basicExercises_Prog29/"/>
-    <id>http://yoursite.com/2020/05/14/basicExercises_Prog29/</id>
-    <published>2020-05-14T04:09:20.000Z</published>
-    <updated>2020-05-14T04:09:24.473Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="basicExercises-Prog29-java"><a href="#basicExercises-Prog29-java" class="headerlink" title="basicExercises.Prog29.java"></a>basicExercises.Prog29.java</h4><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package basicExercises;</span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">    【程序29】</span><br><span class="line">    题目：求一个3*3矩阵对角线元素之和</span><br><span class="line">    程序分析：利用双重for循环控制输入二维数组，再将a[i][i]累加后输出。</span><br><span class="line"></span><br><span class="line"> *&#x2F;</span><br><span class="line">public class Prog29 &#123;</span><br><span class="line">    public static void main(String[] args)&#123;</span><br><span class="line">        int[][] a &#x3D; new int[][] &#123;&#123;100,2,3&#125;,&#123;4,5,6&#125;,&#123;17,8,9&#125;&#125;;</span><br><span class="line">        sum(a);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    private static void sum(int[][] a) &#123;</span><br><span class="line">        int sum1 &#x3D; 0;</span><br><span class="line">        int sum2 &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; a.length; i++) &#123;</span><br><span class="line">            sum1 +&#x3D; a[i][i];</span><br><span class="line">            sum2 +&#x3D; a[i][a.length-1-i];</span><br><span class="line">        &#125;</span><br><span class="line">        int sum &#x3D; 0;</span><br><span class="line">        if (a.length%2 !&#x3D; 0) &#123;</span><br><span class="line">            sum &#x3D; sum1 + sum2 - a[a.length&#x2F;2][a.length&#x2F;2];</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            sum &#x3D; sum1+sum2;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(&quot;对角之和为：&quot; + sum);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;basicExercises-Prog29-java&quot;&gt;&lt;a href=&quot;#basicExercises-Prog29-java&quot; class=&quot;headerlink&quot; title=&quot;basicExercises.Prog29.java&quot;&gt;&lt;/a&gt;basicExercises.Prog29.java&lt;/h4&gt;
     
     </summary>
     
